@@ -1,0 +1,35 @@
+//font import
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@550;600&display=swap');
+
+//variables
+$white: #fff;
+$blue: #F6C0BC;
+$grey: #363636;
+$font: "Poppins", sans-serif;
+
+.btnComponent {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.btnComponent a {
+  color: $white;
+  text-decoration: none;
+  font-family: $font;
+  border: 3px solid $blue;
+  transition: 1s;
+  padding: 15px 35px 15px 35px;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  background-color: $blue;
+  border-radius: 40px;
+}
+
+//hover effect
+
+.btnComponent a:hover {
+  letter-spacing: 0rem;
+}

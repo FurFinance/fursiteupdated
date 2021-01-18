@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+//de rezolvat bug scroll problema la rezolutie mica la containerul cu background albastru
+//variables
+$white: #fff;
+$blue: #1c42ff;
+$second_blue: #284cff;
+$grey: #363636;
+$font: "Oswald", sans-serif;
+$secondFont: "Noto Sans", sans-serif;
+
+.blueSectionContentWrapper h2 {
+  font-family: $font;
+  letter-spacing: 0.05rem;
+  font-size: 20px;
+  color: $grey;
+  font-weight: 300;
+  padding: 1rem;
+}
+
+.blueSectionContentWrapper p {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  font: $secondFont;
+  color: $grey;
+  padding-left: 16px;
+  margin-bottom: 14px;
+  letter-spacing: 0.05rem;
+}
+
+.blueSectionContentWrapper p span {
+  color: $blue;
+  font-weight: bold;
+}
+
+//hover effects
+.blueSectionContentWrapper:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+//responsive
+
+@media screen and (max-width: 700px) {
+  .blueSectionContentWrapper {
+    width: 70%;
+    padding: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blueSectionContentWrapper {
+    width: 50%;
+    padding: 35px;
+  }
+}

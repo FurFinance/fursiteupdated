@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+//variables
+$white: #fff;
+$blue: #4166de;
+$second_blue: #284cff;
+$grey: #F7C53D;
+$font: "Noto", sans-serif;
+$secondFont: "Poppins", sans-serif;
+
+//title + wrapper section
+
+.background {
+}
+
+[data-aos^=zoom][data-aos^=zoom] {
+  opacity: 1 !important;
+  z-index: 999;
+}
+.allbutton {
+  color: red !important;
+}
+
+.teamSectionWrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #4166de;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.titleParent {
+  color: $white;
+  font-family: $font;
+  letter-spacing: 0.2rem;
+}
+
+.teamMembers ul {
+  list-style-type: none;
+  color: $white;
+}
+.teamMembers ul li {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+.teamMembers ul li svg {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.member {
+  font-family: $secondFont;
+  font-size: 5rem;
+}
+
+.role {
+  font-family: $font;
+  font-size: 2rem;
+}
+
+//effects
+
+.teamMembers ul li:hover {
+  transform: rotate(5deg);
+  background-color: $grey;
+  border: 2px solid $grey;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+//responsive
+
+@media screen and (max-width: 800px) {
+  .teamSectionWrapper {
+    flex-direction: column;
+  }
+}

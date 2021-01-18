@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+//variables
+$white: #fff;
+$blue: #e46b6b;
+$second_blue: #e46b6b;
+$grey: #363636;
+$font: "Poppins", sans-serif;
+$secondFont: "Poppins", sans-serif;
+
+.info2wrap {
+  display: flex;
+  justify-content: center;
+
+  div {
+    background-color: #fc6c6b;
+    padding: 0.5rem 1rem;
+    margin: 30px;
+    border-radius: 20px;
+  }
+
+  p {
+    color: white;
+    font-family: $font;
+    font-size: 0.8rem;
+  }
+}
+
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.infoCoinSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #fc6c6b;
+  border-radius: 20px;
+  margin-top: 20px;
+
+  div {
+    background-color: #fc6c6b;
+    padding: 0.5rem;
+    background-color: #fc6c6b;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  p {
+    color: white;
+    font-family: $font;
+    font-size: 0.8rem;
+  }
+}
+
+.chart {
+  width: 1000px;
+}
+
+.chartSectionWrapper {
+  width: 90%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  img {
+    object-fit: contain;
+    width: 125px;
+  }
+  @media screen and (max-width: 900px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .chart {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .chart {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .chartSectionWrapper {
+    margin-top: 300px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .infoCoinSection {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 550px) {
+  .infoCoinSection {
+    flex-direction: column;
+    margin-top: 240px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .info2wrap {
+    flex-direction: column;
+
+    div {
+      margin-top: 0px;
+    }
+  }
+}

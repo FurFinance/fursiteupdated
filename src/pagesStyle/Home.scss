@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+//variables
+$white: #fff !important;
+$blue: #fc6c6b !important;
+$second_blue: #4166de !important;
+$grey: #f7c53d !important;
+$font: 'Poppins', sans-serif !important;
+$secondFont: 'Noto Sans', sans-serif !important;
+$thirdFont: 'VT323', sans-serif !important;
+
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 1 !important;
+}
+
+.MetaMaskHomeButton {
+    margin-top: 3rem;
+    font-family: $thirdFont;
+    font-size: 3rem;
+    color: $grey;
+    border: 6px solid $grey;
+    padding: 1rem;
+    transition: 0.3s ease all;
+}
+
+.MetaMaskHomeButton:hover {
+    background-color: $grey;
+    color: $second_blue;
+}
+
+.testingthespace {
+    margin-top: 0px;
+}
+
+.homePageBlueArea {
+    height: 100vh;
+
+    .title {
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.mainContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+//title section
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: $second_blue;
+}
+
+.lastphoto {
+    margin-top: 10px;
+}
+
+.title h1 {
+    font-family: $font;
+    color: $grey;
+    font-size: 10rem;
+    letter-spacing: 0rem;
+    transition: 1s;
+}
+
+.title p {
+    color: $grey;
+    font-size: 1.5rem;
+    font-family: $thirdFont;
+    letter-spacing: 0.1rem;
+    transition: 0.2s;
+}
+
+//hover effects
+
+.title h1:hover {
+    font-size: 5rem;
+}
+
+.title p:hover {
+    font-size: 1.2rem;
+}
+
+//responsive for title + subtitle
+
+@media screen and (max-width: 800px) {
+    .title h1 {
+        font-size: 5rem;
+        letter-spacing: 0.6rem;
+    }
+    .title p {
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .title h1 {
+        font-size: 3.2rem;
+        letter-spacing: 0.45rem;
+    }
+    .title p {
+        font-size: 0.6rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+//responsive for phones
+
+@media screen and (max-height: 700px) {
+    .testingthespace {
+        margin-top: 0px;
+    }
+}
+@media screen and (max-height: 568px) {
+    .testingthespace {
+        margin-top: 0px;
+    }
+}
+
+//here start the styleing for the second content section
+
+//color of the second section on homepage
+.secondContent {
+    background-color: $blue;
+}
+
+//centering the content
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.starsWrapper {
+    background-color: $second_blue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    color: $grey;
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+    font-family: $thirdFont;
+    flex-direction: column;
+    align-items: center;
+    font-size: 7rem;
+    letter-spacing: 0.45rem;
+}
+.starsWrapper p {
+    margin-top: 25px;
+}
+//stars icons
+.stars {
+    margin-top: 15px;
+}
+
+.wrapper h3 {
+    font-family: $font;
+    color: $white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
+.tradeButtonParent {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 150px;
+}
+
+body {
+    position: relative;
+}

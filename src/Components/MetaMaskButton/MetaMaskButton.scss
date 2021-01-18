@@ -1,0 +1,14 @@
+.MetaMaskButton {
+    color: white;
+    background-color: #fc6c6b;
+    padding: 5px 20px 5px 20px;
+    border: 2px solid #f7c53d;
+    text-shadow: -1px 0 #f7c53d, 0 1px #f7c53d, 1px 0 #f7c53d, 0 -1px #f7c53d;
+}
+
+.MetaMaskButton:hover {
+    padding-bottom: 1px;
+    border-bottom: none;
+    padding-bottom: 5px;
+    background-color: #26d0eb;
+}
