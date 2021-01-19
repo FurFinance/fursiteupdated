@@ -57,7 +57,7 @@ const Navbar = (props) => {
               </Link>
             </li>
             <li>
-              <a className="stakeBTN" href="https://lucky-field-1404.on.fleek.co">
+              <a className="stakeBTN" href="app.fur.finance">
                 FARM
               </a>
             </li>
