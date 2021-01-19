@@ -57,7 +57,7 @@ const Navbar = (props) => {
               </Link>
             </li>
             <li>
-              <a className="stakeBTN" href="app.fur.finance">
+              <a className="stakeBTN" href="https://app.fur.finance">
                 FARM
               </a>
             </li>
