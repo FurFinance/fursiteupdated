@@ -80,8 +80,7 @@ $thirdFont: "VT323", sans-serif;
 }
 
 .moreInfo h3 {
-  color: $grey;
-  font-family: $font;
+  
   font-size: 1.4rem;
   letter-spacing: 0.04rem;
   font-weight: lighter;
@@ -96,7 +95,6 @@ $thirdFont: "VT323", sans-serif;
   font-family: $secondFont;
   font-size: 0.9rem;
   text-align: justify;
-  color: $grey;
   display: block;
   margin: 0 auto;
 }

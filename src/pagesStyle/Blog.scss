@@ -31,8 +31,6 @@ $thirdFont: "VT323", sans-serif !important;
   align-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 60vh;
-  background-color: $second_blue;
 }
 
 .lastphoto {
@@ -42,14 +40,11 @@ $thirdFont: "VT323", sans-serif !important;
 
 .title h1 {
   font-family: $font;
-  color: $grey;
-  font-size: 10rem;
+  font-size: 5rem;
   letter-spacing: 0rem;
-  transition: 1s;
 }
 
 .title p {
-  color: $grey;
   font-size: 1.5rem;
   font-family: $thirdFont;
   letter-spacing: 0.1rem;

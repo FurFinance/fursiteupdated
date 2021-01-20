@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { Navbar } from 'ui-neumorphism';
+import { Switch } from 'ui-neumorphism';
 
 /* import Context from "../../Context/ReactContext"; */
 
@@ -6,44 +8,42 @@ import React, { useContext } from "react";
 import "./NavbarStyle.scss";
 
 //logo
-import logophoto from "../../images/logophoto.png";
+import catlogo from "../../images/cat.gif";
 
 //react router dom
 import { BrowserRouter as Router, Link } from "react-router-dom";
 /* import MetaMaskButton from "../MetaMaskButton/MetaMaskButton"; */
 //
-const Navbar = (props) => {
+const DarkmodeNav = (props) => {
   const { isNight, setNight } = props;
   /*  var { maskProvider, maskAccount, maskName, parent } = props; */
 
   /* var myContext = useContext(Context); */
 
   return (
-    <nav style={{  zIndex:'9999',
-    boxShadow: isNight ? '-1px 13px 31px -12px rgba(87, 101, 116,1.0)' : '-1px 13px 8px -12px rgba(54, 54, 54, 0.4)' }}>
-      <div className="contain">
-        <img src={logophoto} alt="logo" />
-        <div className="" style={{ marginLeft: "auto" }}></div>
+    <nav>
+      <div class="nav-wrapper position-relative">
+        
+        
         <nav-links>
           <ul>
-            {/*   {myContext.makeAccount && (
-              <> */}
+          <img className="catToken" src={catlogo} alt="logo" />
             <li>
-              <Link to="/">HOME</Link>
+              <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
             </li>
             <li>
-              <Link to="/about">ABOUT</Link>
+              <Link style={{color: "rgb(15, 224, 15)"}} to="/about">ABOUT</Link>
             </li>
             <li>
-              <Link to="/chart">PRICE</Link>
+              <Link style={{color: "rgb(15, 224, 15)"}} to="/chart">PRICE</Link>
             </li>
             <li>
-              <Link to="/team">TEAM</Link>
+              <Link style={{color: "rgb(15, 224, 15)"}} to="/team">TEAM</Link>
             </li>
 
             <li>
               <a
-                className="tradeBTN"
+                style={{color: "rgb(15, 224, 15)"}}
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
@@ -52,22 +52,23 @@ const Navbar = (props) => {
               </a>
             </li>
             <li>
-              <Link className="stakeBTN" to="/stake">
+              <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/stake">
                 STAKE
               </Link>
             </li>
             <li>
-              <a className="stakeBTN" href="https://app.fur.finance">
+              <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
                 FARM
               </a>
             </li>
-            <li className="onoffswitch">
-              <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" onChange={e => setNight(!isNight)} id="myonoffswitch" />
+            
+            <Switch className="switch" onClick={e => setNight(!isNight)} className="onoffswitch">
+              <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
               <label className="onoffswitch-label" htmlFor="myonoffswitch">
                 <span className="onoffswitch-inner"></span>
                 <span className="onoffswitch-switch"></span>
               </label>
-            </li>
+            </Switch>
 
             {/* </>
             )}
@@ -81,4 +82,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default DarkmodeNav;

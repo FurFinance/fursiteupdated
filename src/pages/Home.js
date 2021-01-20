@@ -1,20 +1,10 @@
 import React, { useContext } from "react";
-
-import { motion, AnimatePresence } from "framer-motion";
-
-import { AiFillStar } from "react-icons/ai";
-/* import Context from "../Context/ReactContext"; */
-
 import "../pagesStyle/Home.scss";
-
 //import other components
 import Button from "../Components/Button/Button";
-
-//effects
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import logophoto from "../images/logophoto.png";
+import uniswap from "../images/uniswap.gif";
+
 
 const Home = ({ Title, subTitle }) => {
   /*   var { maskAccount, maskProvider, connectMetaMask } = useContext(Context); */
@@ -25,11 +15,11 @@ const Home = ({ Title, subTitle }) => {
         <div className="testingthespace">
           <div className="homePageBlueArea">
             <div className="title">
-              <img src={logophoto} alt="" />
-              <div data-aos="zoom-in" style={{ opacity: 1 }}>
+             
+              <div style={{ opacity: 1 }}>
                 <h1 style={{ opacity: 1 }}>{Title}</h1>
               </div>
-              <div data-aos="zoom-in" style={{ opacity: 1 }}>
+              <div style={{ opacity: 1 }}>
                 <p style={{ opacity: 1 }}>{subTitle}</p>
               </div>
               {/*      <AnimatePresence>
@@ -62,10 +52,10 @@ const Home = ({ Title, subTitle }) => {
                     </div> */}
 
           <div className="tradeButtonParent">
-            <Button
+            <Button 
               link={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
             >
-              Trade Now
+              trade now
             </Button>
           </div>
         </div>

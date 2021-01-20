@@ -17,23 +17,29 @@ $font: 'VT323', sans-serif;
 
 //styleing
 nav {
+    color: green;
+    font-style: italic;
     width: 100%;
-    margin: auto;
+    // border: 2px solid red;
     display: flex;
-    padding: 1rem 0;
-    background-color: white;
-
+    justify-content: center;
+    
     //stick the navbar to the top
-    position: fixed;
+   
     top: 0;
 
     //shadow
 
     .contain {
         width: 90%;
-        margin: auto;
+        margin: 0 auto;
         display: flex;
     }
+}
+
+.catToken {
+    height: 28;
+    margin-top: 1.3rem;
 }
 
 nav img {
@@ -51,57 +57,57 @@ nav-links ul {
 nav-links ul li {
     text-decoration: none;
     font-size: 3rem;
-    margin: 0px 6px 7px 20px;
-    color: $blue;
+    margin: 10px;
+    
 }
 
 nav-links ul li a {
+    // border: 2px solid red;
     text-decoration: none;
-    color: $blue;
+    width: 500rem;
     font-family: $font;
     font-size: 1.7rem;
     transition: 0.2s;
 }
 
 //style of trade btn
-.tradeBTN {
-    color: $white;
-    border: 2px solid #f7c53d;
-    background-color: $blue;
-    text-shadow: -1px 0 #f7c53d, 0 1px #f7c53d, 1px 0 #f7c53d, 0 -1px #f7c53d;
-    padding: 5px 23px 5px 23px;
-}
+
 
 //style of stake btn
-.stakeBTN {
-    color: $white;
-    background-color: $blue;
-    border: 2px solid #f7c53d;
-    text-shadow: -1px 0 #f7c53d, 0 1px #f7c53d, 1px 0 #f7c53d, 0 -1px #f7c53d;
-    padding: 5px 23px 5px 23px;
-}
+
 
 //hover efects
 nav-links ul li a:hover {
-    border-bottom: 3px solid $blue;
+    
     padding-bottom: 1px;
 }
 
 .tradeBTN:hover {
     border-bottom: none;
     padding-bottom: 5px;
-    background-color: $grey;
+    
 }
 
 .stakeBTN:hover {
     border-bottom: none;
     padding-bottom: 5px;
-    background-color: $grey;
+    
+}
+
+.switch {
+    margin-top: 500px;
 }
 
 //responsive
 
 @media screen and (max-width: 800px) {
+
+    Switch {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0px 20px 0px;     
+    }
     nav {
         flex-direction: column;
         align-items: center;

@@ -3,16 +3,13 @@
   flex-direction: column;
   width: 250px;
   h3 {
-    color: #f7c53d;
     padding: 1rem;
-    background-color: #4166de;
     border-radius: 80px;
     text-align: center;
     padding-top: 2rem;
     width: 200px;
   }
   .upper {
-    background-color: #fc6c6b;
     height: 200px;
     width: 270px;
     display: flex;
@@ -25,7 +22,6 @@
 
   .bottom {
     height: 140px;
-    background-color: white;
     margin: 0px;
     width: 270px;
   }
@@ -35,9 +31,6 @@
   margin-top: 0px;
   height: 30px;
   width: 270px;
-  background-color: #fc6c6b;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .bigparent-wrapper {
@@ -49,7 +42,6 @@
   display: flex;
 
   justify-content: space-evenly;
-  background-color: #4166de;
   padding-bottom: 30px;
 }
 
