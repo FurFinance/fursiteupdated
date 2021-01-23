@@ -35,7 +35,7 @@ code {
 
 .onoffswitch-inner {
   display: block;
-  width: 200%;
+  width: 100%;
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
 }
@@ -85,19 +85,10 @@ code {
 }
 
 
-.svg-top {
-  position: absolute;
-  top: 20px;
-  z-index: 0 !important;
-}
 
-.svg-bottom {
-  margin-top: -20px;
-  z-index: 0 !important;
-}
 
 .nt {
-  background-color: #222f3e;
+  background-color: #161b22;
   color: white;
 }
 

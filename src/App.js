@@ -1,8 +1,10 @@
 import React, { Component, lazy, useEffect, useState } from "react";
-import 'ui-neumorphism/dist/index.css'
+import { Card } from 'ui-neumorphism';
 import './index.css'
 import detectEthereumProvider from "@metamask/detect-provider";
+import 'ui-neumorphism/dist/index.css'
 /* import Context from "./Context/ReactContext"; */
+import ReactTypingEffect from 'react-typing-effect';
 
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -84,7 +86,7 @@ function App() {
               path="/"
               component={() => (
                 <Home style={{color: "lime"}}
-                  Title={"fur.finance"}
+                  Title="fur.finance"
                   subTitle={
                     "simple decentralised products for high risk-adjusted returns"
                   }
@@ -103,7 +105,7 @@ function App() {
       
         <BottomBar isNight={isNight} />
       </Router>
-      {/*  </Context.Provider> */}
+      
     </div>
 
   );

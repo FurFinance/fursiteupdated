@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import "../pagesStyle/Home.scss";
 //import other components
 import Button from "../Components/Button/Button";
+import { Card } from 'ui-neumorphism'
 import logophoto from "../images/logophoto.png";
+import somethingCat from '../images/somethingCat.gif'
 import uniswap from "../images/uniswap.gif";
+import ReactTypingEffect from 'react-typing-effect';
 
 
-const Home = ({ Title, subTitle }) => {
+const Home = ({ Title, subTitle, isNight }) => {
   /*   var { maskAccount, maskProvider, connectMetaMask } = useContext(Context); */
 
   return (
@@ -15,13 +18,16 @@ const Home = ({ Title, subTitle }) => {
         <div className="testingthespace">
           <div className="homePageBlueArea">
             <div className="title">
-             
+
               <div style={{ opacity: 1 }}>
-                <h1 style={{ opacity: 1 }}>{Title}</h1>
+         
+
+                <h1 className="h1Title" style={{ color: 'green' }}>{Title}</h1>
               </div>
-              <div style={{ opacity: 1 }}>
+              <Card inset className="subtitle" style={{ margin: '10px' }}>
                 <p style={{ opacity: 1 }}>{subTitle}</p>
-              </div>
+                <img className="catgirl" height='150' width='150' src={somethingCat} />
+              </Card>
               {/*      <AnimatePresence>
                                 {!maskAccount && (
                                     <motion.a
@@ -50,9 +56,10 @@ const Home = ({ Title, subTitle }) => {
                             <Pannels />
                         </div>
                     </div> */}
-
+                    
           <div className="tradeButtonParent">
-            <Button 
+            { }
+            <Button
               link={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
             >
               trade now

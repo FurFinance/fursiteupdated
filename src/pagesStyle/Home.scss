@@ -33,7 +33,9 @@ a {
 }
 
 
-
+.catGirl {
+    margin: 0 auto;
+}
 
     .title {
         width: 90%;
@@ -47,7 +49,8 @@ a {
 
 //title section
 .title {
-    margin-top: -150px;
+    
+    margin-top: -90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,12 +60,28 @@ a {
     height: 75vh;
 }
 
+.h1Title {
+animation: color-change 5s infinite;
+}
+
+
+@keyframes color-change {
+  14% { color: rgb(37, 150, 150); }
+  28% { color: rgb(224, 18, 196); }
+  42% { color: rgb(190, 0, 0); }
+  56% { color: rgb(0, 255, 0); }
+  70% { color: rgb(0, 0, 255); }
+  84% { color: indigo; }
+  100% { color: rgba(161, 35, 161, 0.521); }
+  
+}
+
 .lastphoto {
     margin-top: 10px;
 }
 
 .title h1 {
-    font-family: $font;
+   
     font-size: 4.8rem;
     letter-spacing: 0rem;
 }
@@ -72,6 +91,18 @@ a {
     font-family: $thirdFont;
     letter-spacing: 0.1rem;
     color:rgb(15, 224, 15);
+}
+
+.subtitle {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-top: 30px;
+    display: block;
+    justify-content: center;
+    box-shadow: none;
+    background-color: transparent
 }
 
 //hover effects
@@ -140,13 +171,7 @@ a {
     font-size: 7rem;
     letter-spacing: 0.45rem;
 }
-.starsWrapper p {
-    margin-top: 25px;
-}
-//stars icons
-.stars {
-    margin-top: 15px;
-}
+
 
 .wrapper h3 {
     font-family: $font;

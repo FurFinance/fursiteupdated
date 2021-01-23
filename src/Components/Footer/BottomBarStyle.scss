@@ -1,0 +1,19 @@
+.iconsParent {
+    
+    display: flex;
+   
+   justify-content: center;
+    width: 100%;
+    padding-bottom: 60px;
+ a {
+     
+     margin-right: 40px;
+     margin-left: 40px;
+ }
+
+ a:hover {
+     transform: scale(1.5);
+     transition: .5s;
+ }
+    
+}

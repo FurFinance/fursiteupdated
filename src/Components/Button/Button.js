@@ -7,8 +7,8 @@ import "./Button.scss";
 
 const Buttons = ({ children, link }) => {
   return (
-    <Button className="btnComponent">
-      <a href={link}>{children}</a>
+    <Button className="btnComponent" style={{color: "rgb(15, 224, 15)"}}>
+      <a href={link} style={{color: "rgb(15, 224, 15)"}}>{children}</a>
     </Button>
   );
 };

@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Navbar } from 'ui-neumorphism';
 import { Switch } from 'ui-neumorphism';
+import 'ui-neumorphism/dist/index.css'
 
 /* import Context from "../../Context/ReactContext"; */
 
@@ -27,7 +28,7 @@ const DarkmodeNav = (props) => {
         
         <nav-links>
           <ul>
-          <img className="catToken" src={catlogo} alt="logo" />
+          <img className="catToken" src={catlogo} alt="logo" height="20"/>
             <li>
               <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
             </li>
@@ -53,17 +54,17 @@ const DarkmodeNav = (props) => {
             </li>
             <li>
               <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/stake">
-                STAKE
+                VAULT
               </Link>
             </li>
             <li>
               <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
-                FARM
+                FARMS
               </a>
             </li>
             
-            <Switch className="switch" onClick={e => setNight(!isNight)} className="onoffswitch">
-              <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
+            <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
+              <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
               <label className="onoffswitch-label" htmlFor="myonoffswitch">
                 <span className="onoffswitch-inner"></span>
                 <span className="onoffswitch-switch"></span>
