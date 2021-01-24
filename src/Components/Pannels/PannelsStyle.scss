@@ -4,10 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 //variables
-$white: #fff;
-$blue: #1D6AD0;
-$second_blue: #284cff;
-$grey: #1D6AD0;
 $font: "Poppins", sans-serif;
 $secondFont: "Noto Sans", sans-serif;
 
@@ -25,7 +21,6 @@ $secondFont: "Noto Sans", sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $white;
   padding: 2rem;
   width: 27%;
   margin-top: 30px;
@@ -37,18 +32,15 @@ $secondFont: "Noto Sans", sans-serif;
   font-size: 4rem;
   margin-bottom: 20px;
   padding: 1rem;
-  color: #788cec;
 }
 
 .pannel h3 {
   margin-bottom: 2rem;
-  color: #788cec;
   font-size: 2rem;
   font-family: $font;
 }
 
 .pannel p {
-  color: $blue;
   font-family: $font;
   text-align: center;
   max-width: 320px;
@@ -56,11 +48,7 @@ $secondFont: "Noto Sans", sans-serif;
 
 //hover effects
 
-.pannel:hover {
-  -webkit-box-shadow: -1px 13px 31px -12px rgba(54, 54, 54, 1);
-  -moz-box-shadow: -1px 13px 31px -12px rgba(54, 54, 54, 1);
-  box-shadow: -1px 13px 31px -12px rgba(54, 54, 54, 1);
-}
+
 
 //responsive
 

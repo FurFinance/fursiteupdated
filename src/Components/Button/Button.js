@@ -1,15 +1,16 @@
 import React from "react";
+import { Button } from 'ui-neumorphism'
 
 import "./Button.scss";
 
 //icons
 
-const Button = ({ children, link }) => {
+const Buttons = ({ children, link }) => {
   return (
-    <div className="btnComponent">
-      <a href={link}>{children}</a>
-    </div>
+    <Button className="btnComponent" style={{color: "rgb(15, 224, 15)"}}>
+      <a href={link} style={{color: "rgb(15, 224, 15)"}}>{children}</a>
+    </Button>
   );
 };
 
-export default Button;
+export default Buttons;

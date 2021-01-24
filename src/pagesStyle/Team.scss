@@ -7,14 +7,12 @@
 $white: #fff;
 $blue: #4166de;
 $second_blue: #284cff;
-$grey: #F7C53D;
-$font: "Noto", sans-serif;
+$grey:rgba(121, 15, 65, 0.753);
+$font: "Noto", sans-serif;  
 $secondFont: "Poppins", sans-serif;
 
 //title + wrapper section
 
-.background {
-}
 
 [data-aos^=zoom][data-aos^=zoom] {
   opacity: 1 !important;
@@ -25,14 +23,17 @@ $secondFont: "Poppins", sans-serif;
 }
 
 .teamSectionWrapper {
+  color: cyan;
   width: 90%;
   margin: 0 auto;
-  background-color: #4166de;
-
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+  background-color: transparent;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+
+  // margin
 }
 
 .titleParent {
@@ -44,6 +45,7 @@ $secondFont: "Poppins", sans-serif;
 .teamMembers ul {
   list-style-type: none;
   color: $white;
+  margin-top: -80px;
 }
 .teamMembers ul li {
   list-style-type: none;
@@ -57,23 +59,42 @@ $secondFont: "Poppins", sans-serif;
 
 .member {
   font-family: $secondFont;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .role {
-  font-family: $font;
+
   font-size: 2rem;
 }
 
+.role{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0); }
+}
 //effects
 
 .teamMembers ul li:hover {
   transform: rotate(5deg);
   background-color: $grey;
-  border: 2px solid $grey;
+  border: 8px solid rgb(255, 0, 140);
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
 
 //responsive
 

@@ -1,40 +1,19 @@
-$white: #fff;
-$blue: #fcb404;
-$second_blue: #284cff;
-$grey: #363636;
-$font: "Oswald", sans-serif;
-$secondFont: "Noto Sans", sans-serif;
+.iconsParent {
+    
+    display: flex;
+   
+   justify-content: center;
+    width: 100%;
+    padding-bottom: 60px;
+ a {
+     
+     margin-right: 40px;
+     margin-left: 40px;
+ }
 
-hr {
-  color: $grey;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-  bottom: -100px;
-    background-color:  white;
-}
-
-.iconsParent ul {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  font-size: 2rem;
-}
-
-.iconsParent ul li svg {
-  margin: 30px 20px 30px 20px;
-  color: $grey;
-  transition: 0.2s;
-  opacity: 0.5;
-}
-
-.iconsParent ul li svg:hover {
-  color: $blue;
-  border-bottom: 2px solid $blue;
-  padding-bottom: 1px;
-  opacity: 1;
+ a:hover {
+     transform: scale(1.5);
+     transition: .5s;
+ }
+    
 }

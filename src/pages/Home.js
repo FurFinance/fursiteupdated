@@ -1,22 +1,15 @@
 import React, { useContext } from "react";
-
-import { motion, AnimatePresence } from "framer-motion";
-
-import { AiFillStar } from "react-icons/ai";
-/* import Context from "../Context/ReactContext"; */
-
 import "../pagesStyle/Home.scss";
-
 //import other components
 import Button from "../Components/Button/Button";
-
-//effects
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+import { Card } from 'ui-neumorphism'
 import logophoto from "../images/logophoto.png";
+import somethingCat from '../images/somethingCat.gif'
+import uniswap from "../images/uniswap.gif";
+import ReactTypingEffect from 'react-typing-effect';
 
-const Home = ({ Title, subTitle }) => {
+
+const Home = ({ Title, subTitle, isNight }) => {
   /*   var { maskAccount, maskProvider, connectMetaMask } = useContext(Context); */
 
   return (
@@ -25,13 +18,16 @@ const Home = ({ Title, subTitle }) => {
         <div className="testingthespace">
           <div className="homePageBlueArea">
             <div className="title">
-              <img src={logophoto} alt="" />
-              <div data-aos="zoom-in" style={{ opacity: 1 }}>
-                <h1 style={{ opacity: 1 }}>{Title}</h1>
+
+              <div style={{ opacity: 1 }}>
+         
+
+                <h1 className="h1Title" style={{ color: 'green' }}>{Title}</h1>
               </div>
-              <div data-aos="zoom-in" style={{ opacity: 1 }}>
+              <Card inset className="subtitle" style={{ margin: '10px' }}>
                 <p style={{ opacity: 1 }}>{subTitle}</p>
-              </div>
+                <img className="catgirl" height='150' width='150' src={somethingCat} />
+              </Card>
               {/*      <AnimatePresence>
                                 {!maskAccount && (
                                     <motion.a
@@ -60,12 +56,13 @@ const Home = ({ Title, subTitle }) => {
                             <Pannels />
                         </div>
                     </div> */}
-
+                    
           <div className="tradeButtonParent">
+            { }
             <Button
               link={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
             >
-              Trade Now
+              trade now
             </Button>
           </div>
         </div>

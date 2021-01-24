@@ -1,6 +1,10 @@
 import React, { Component, lazy, useEffect, useState } from "react";
+import { Card } from 'ui-neumorphism';
+import './index.css'
 import detectEthereumProvider from "@metamask/detect-provider";
+import 'ui-neumorphism/dist/index.css'
 /* import Context from "./Context/ReactContext"; */
+import ReactTypingEffect from 'react-typing-effect';
 
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -62,7 +66,7 @@ function App() {
 
 
   return (
-    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? 'white' : '#363636', backgroundRepeat: 'repeat', position: 'relative' }}>
+    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative' }}>
       {/*  <Context.Provider
         value={{
           maskProvider,
@@ -72,11 +76,8 @@ function App() {
           connectMetaMask,
         }}
       > */}
-      <svg className="svg-top"
-        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#f8a5af" fill-opacity="0.6" d="M0,160L120,170.7C240,181,480,203,720,197.3C960,192,1200,160,1320,144L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-      </svg>
-      <div className="br"></div>
+
+      {/* <div className="br"></div> */}
       <Router>
         <Navbar isNight={isNight} setNight={setNight} />
         <Suspense fallback={<div>Loading...</div>}>
@@ -84,8 +85,8 @@ function App() {
             <Route
               path="/"
               component={() => (
-                <Home
-                  Title={"fur.finance"}
+                <Home style={{color: "lime"}}
+                  Title="fur.finance"
                   subTitle={
                     "simple decentralised products for high risk-adjusted returns"
                   }
@@ -101,13 +102,10 @@ function App() {
             <Route component={Error404} />
           </Switch>
         </Suspense>
-        <svg className="svg-bottom"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-          <path fill="#f8a5af" fill-opacity="0.6" d="M0,96L120,90.7C240,85,480,75,720,80C960,85,1200,107,1320,117.3L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
+      
         <BottomBar isNight={isNight} />
       </Router>
-      {/*  </Context.Provider> */}
+      
     </div>
 
   );
