@@ -3,10 +3,13 @@
     display: flex;
    
    justify-content: center;
+   align-items: flex-end;
+    
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 134px;
+    
  a {
-     
+     margin-bottom: -120px;
      margin-right: 40px;
      margin-left: 40px;
  }
