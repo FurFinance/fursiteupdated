@@ -3,7 +3,7 @@ import { Card } from 'ui-neumorphism';
 import './index.css'
 import detectEthereumProvider from "@metamask/detect-provider";
 import 'ui-neumorphism/dist/index.css'
-/* import Context from "./Context/ReactContext"; */
+import Context from "./Context/ReactContext"; 
 import ReactTypingEffect from 'react-typing-effect';
 
 //react router dom
@@ -29,7 +29,7 @@ const Chart = React.lazy(() => import("./pages/Chart"));
 
 function App() {
   const [isNight, setNight] = useState(false);
-  /*   const [maskProvider, setMaskProvider] = useState();
+  const [maskProvider, setMaskProvider] = useState();
   const [maskAccount, setMaskAccount] = useState();
 
   useEffect(() => {
@@ -61,13 +61,13 @@ function App() {
       );
     }
   };
- */
+ 
 
 
 
   return (
     <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative' }}>
-      {/*  <Context.Provider
+       <Context.Provider
         value={{
           maskProvider,
           setMaskProvider,
@@ -75,9 +75,8 @@ function App() {
           setMaskAccount,
           connectMetaMask,
         }}
-      > */}
+      />
 
-      {/* <div className="br"></div> */}
       <Router>
         <Navbar isNight={isNight} setNight={setNight} />
         <Suspense fallback={<div>Loading...</div>}>
@@ -87,9 +86,8 @@ function App() {
               component={() => (
                 <Home style={{color: "lime"}}
                   Title="fur.finance"
-                  subTitle={
-                    "simple decentralised products for high risk-adjusted returns"
-                  }
+                  maskAccount={maskAccount}
+                  
                 />
               )}
               exact

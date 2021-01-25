@@ -25,6 +25,11 @@ $secondFont: "poppins", sans-serif;
 .sectionWrapperTest {
   display: flex;
   justify-content: space-around;
+  text-align: center;
+  margin-top: 3rem;
+ 
+  margin-left: 17rem;
+  margin-right: 17rem;
 }
 
 @media screen and (max-width: 708) {
@@ -35,58 +40,23 @@ $secondFont: "poppins", sans-serif;
 }
 
 .infopannel {
-  width: 40%;
+  width: 20%;
   padding: 1rem;
+ 
 }
 
-.infopannel .border {
-  justify-content: center;
-  flex-direction: column;
+.staking {
+ background-color: transparent;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.stakingCard {
   display: flex;
-  align-items: center;
-    background-color: #f1e7cc;
-    padding: 0.5rem;
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.42), 0 6px 10px 0 rgba(133, 94, 94, 0.59), inset 4px -4px 10px #000000;;
-  border-image:url('../images/wood.jpg') 30 30 stretch !important;
-  border: 15px solid;
-}
-
-.infopannel .border-dotted {
-  border: dashed 5px #b1b176;
-  padding: 0.8rem;
-}
-
-.infopannel h5 {
-  color: #4D3A40;
-  font-family: $secondFont;
-  font-size: 1rem;
-  letter-spacing: 0.03rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #4D3A40;
-}
-
-.infopannel h2 {
-  color: #4D3A40;
-  font-family: $secondFont;
-  font-size: 1.2rem;
-  letter-spacing: 0.03rem;
-  padding-top: 0.5rem;
-}
-
-.infopannel h3 {
-  font-size: 1.1rem;
-  color: #4D3A40 !important;
-}
-
-//second row
-
-.infopannel p {
-  color: #4D3A40;
-  margin-top: 12px;
-  font-family: $secondFont;
-  letter-spacing: 0.05rem;
-  font-size: 0.9rem;
-  
+  justify-content: space-between;
+  margin: 1rem;
 }
 
 .bottom {
@@ -150,6 +120,41 @@ $secondFont: "poppins", sans-serif;
 //effects
 .infopannel button:hover {
   cursor: pointer;
+}
+
+.h1Title {
+  animation: color-change 5s infinite;
+  font-size: 1.2rem;
+  
+}
+
+.h5Title {
+  
+  font-size: 1.5rem;
+  animation: color-change 5s infinite;
+ 
+}
+
+.farmBtn {
+  color: lime;
+}
+
+@keyframes color-change {
+  14% { color: rgb(37, 150, 150); }
+  28% { color: rgb(224, 18, 196); }
+  42% { color: rgb(190, 0, 0); }
+  56% { color: rgb(0, 255, 0); }
+  70% { color: rgb(0, 0, 255); }
+  84% { color: indigo; }
+  100% { color: rgba(161, 35, 161, 0.521); }
+  14% { color: rgb(37, 150, 150); }
+  28% { color: rgb(224, 18, 196); }
+  42% { color: rgb(190, 0, 0); }
+  56% { color: rgb(0, 255, 0); }
+  70% { color: rgb(0, 0, 255); }
+  84% { color: indigo; }
+  100% { color: rgba(161, 35, 161, 0.521); }
+  
 }
 
 //responsive
