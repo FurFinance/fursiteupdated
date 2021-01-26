@@ -28,19 +28,13 @@ const DarkmodeNav = (props) => {
         
         <nav-links>
           <ul>
-          <img className="catToken" src={catlogo} alt="logo" height="20"/>
+          
             <li>
               <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
             </li>
-            <li>
-              <Link style={{color: "rgb(15, 224, 15)"}} to="/about">ABOUT</Link>
-            </li>
-            <li>
-              <Link style={{color: "rgb(15, 224, 15)"}} to="/chart">PRICE</Link>
-            </li>
-            <li>
-              <Link style={{color: "rgb(15, 224, 15)"}} to="/team">TEAM</Link>
-            </li>
+            
+           
+           
 
             <li>
               <a
@@ -63,7 +57,7 @@ const DarkmodeNav = (props) => {
               </a>
             </li>
             
-            <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
+            <Switch  color="green" onClick={e => setNight(!isNight)} className="onoffswitch">
               <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
               <label className="onoffswitch-label" htmlFor="myonoffswitch">
                 <span className="onoffswitch-inner"></span>

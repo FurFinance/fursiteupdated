@@ -17,19 +17,31 @@ $secondFont: "poppins", sans-serif;
   padding: 0;
 }
 
-.testSesctionWrapper {
-  width: 90%;
+.cardWrapper {
+  background-color: transparent;
   margin: 0 auto;
+  margin-top: 1%;
+  padding: 2.5rem;
+  width: 40%;
 }
 
+
+
 .sectionWrapperTest {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 3rem;
+  background-color: transparent;
  
-  margin-left: 17rem;
-  margin-right: 17rem;
+  display: flex; 
+  text-align: center;
+  flex-direction: column;
+  width: 80%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 1rem;
+  
+  
+  
+ 
+  
 }
 
 @media screen and (max-width: 708) {
@@ -44,12 +56,17 @@ $secondFont: "poppins", sans-serif;
   padding: 1rem;
  
 }
+h2 {
+  animation: color-change 5s infinite;
+}
 
 .staking {
  background-color: transparent;
+ width: 20%;
   display: block;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: -10%;
 
 }
 
@@ -104,6 +121,11 @@ $secondFont: "poppins", sans-serif;
   }
 }
 
+.stakeFur {
+  background-color: transparent;
+  animation: color-change 5s infinite;
+  margin: 2%;
+}
 .withdrawSection {
   display: flex;
   flex-direction: column;
@@ -123,9 +145,19 @@ $secondFont: "poppins", sans-serif;
 }
 
 .h1Title {
+  margin: 3%;
+  text-align: center;
   animation: color-change 5s infinite;
   font-size: 1.2rem;
   
+  
+}
+
+.input {
+  
+  text-align: center;
+  border: .1px solid grey;
+  background-color: transparent;
 }
 
 .h5Title {
@@ -135,7 +167,19 @@ $secondFont: "poppins", sans-serif;
  
 }
 
+.stakingWrapper {
+  display: block;
+  margin: 0 auto;
+  width: 0%;
+}
+
+.catEatHeart {
+  margin-top: -10%;
+  margin-left: 40%;
+}
+
 .farmBtn {
+  margin: 1%;
   color: lime;
 }
 
