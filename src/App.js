@@ -6,6 +6,7 @@ import 'ui-neumorphism/dist/index.css'
 import Context from "./Context/ReactContext"; 
 import ReactTypingEffect from 'react-typing-effect';
 
+import DOS from 'figlet/importable-fonts/DOS Rebel'
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -49,12 +50,14 @@ function App() {
   }, []);
 
   const connectMetaMask = async () => {
+    let pubKey;
     if (maskProvider) {
       const accounts = await maskProvider.request({
         method: "eth_requestAccounts",
       });
       const account = accounts[0];
       setMaskAccount(account);
+      pubKey = <div>{}</div>
     } else {
       alert(
         "Failed to connect to MetaMask. Do you have it installed? https://metamask.io"
@@ -76,9 +79,14 @@ function App() {
           connectMetaMask,
         }}
       />
-
+  
       <Router>
-        <Navbar isNight={isNight} setNight={setNight} />
+    
+        <Navbar isNight={isNight} setNight={setNight} maskAccount={maskAccount}>
+          
+        </Navbar>
+        
+        
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route
@@ -101,7 +109,7 @@ function App() {
           </Switch>
         </Suspense>
       
-        <BottomBar isNight={isNight} />
+        
       </Router>
       
     </div>
