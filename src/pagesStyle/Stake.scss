@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 //variables
 $white: #4166DE;
@@ -12,12 +15,48 @@ $light: #4166DE;
 $font: "poppins", sans-serif;
 $secondFont: "poppins", sans-serif;
 
+
+
 * {
   margin: 0;
   padding: 0;
 }
 
+
+.stakeHeader {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  background: -webkit-linear-gradient(rgb(255, 45, 192), rgb(167, 0, 139));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-smooth: never;
+-webkit-font-smoothing : none;
+}
+
+.food {
+  
+  margin-left: -15%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.stakeText {
+
+ 
+  white-space: nowrap;
+  font-family: 'Press Start 2P', cursive;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1rem;
+ 
+  
+}
+
 .cardWrapper {
+  text-align: center;
   background-color: transparent;
   margin: 0 auto;
   margin-top: 1%;
@@ -174,8 +213,8 @@ h2 {
 }
 
 .catEatHeart {
-  margin-top: -10%;
-  margin-left: 40%;
+  border: 2px solid red;
+ 
 }
 
 .farmBtn {
@@ -201,6 +240,26 @@ h2 {
   
 }
 
+.stakeFur1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background-image: linear-gradient(to left, red , rgb(255, 230, 0));
+  padding: 1rem;
+  border: 2px solid rgb(0, 0, 0);
+  border-right: 0;
+  
+}
+
+.stakeNumber {
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7rem;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
+}
 //responsive
 
 @media screen and (max-width: 1000px) {

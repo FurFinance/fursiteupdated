@@ -11,6 +11,7 @@ import uniswap from "../images/uniswap.gif";
 import ReactTypingEffect from 'react-typing-effect';
 import { TerminalApp } from '../Components/Terminal/TerminalApp.js'
 import original from '../images/original.gif'
+import eth from '../images/eth.gif'
 import purr from '../images/PURRR.png'
 import catbowl from '../images/CAT BOWL.png'
 import text from '../images/TEXT.png'

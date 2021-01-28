@@ -2,9 +2,10 @@ import React, { Component } from "react";
 
 //import styleing
 import "../pagesStyle/Stake.scss";
-import catEatHeart from "../images/catEatHeart.gif";
+import FOOD from '../images/FOOD.png'
 import { Card, Button, TextArea } from 'ui-neumorphism'
 import 'ui-neumorphism/dist/index.css'
+import ASCII from 'react-rainbow-ascii'
 
 //effects
 import AOS from "aos";
@@ -520,14 +521,20 @@ class Stake extends Component {
       <>
         {/* <div data-aos="fade-up"> */}
         <Card className="cardWrapper">
-          <div className="catEatHeart"><img height="90" width="90" src={catEatHeart} /></div>
+          <h1 className="stakeHeader">{'Kitty Treats'.toUpperCase()}</h1>
+          <div></div>
+          <h2 className="stakeHeader">{'Vending Machine'.toUpperCase()}</h2>
 
-          <Card outlined className="sectionWrapperTest">
+          <Card className="sectionWrapperTest">
+          
 
-
-            <Card outlined className="stakeFur">
-              <h1 text className="h5Title">Total Staked FUR</h1>
-              <h2>{this.displayValue(totalTokenStaked)}</h2>
+            <Card dark className="stakeFur1" >
+            <div className="centerText">
+              <span className="stakeText">{'All Staked FUR'.toUpperCase()}</span>
+              
+              <h1 className="stakeNumber">{this.displayValue(totalTokenStaked)}</h1>
+              </div>
+              <img src={FOOD} className="food" />
             </Card >
 
 
@@ -536,8 +543,8 @@ class Stake extends Component {
 
 
 
-            <Card outlined className="stakeFur">
-              <h1 text className="h5Title">Your Staked FUR</h1>
+            <Card dark outlined className="stakeFur">
+            <ASCII className="ASCII"  text='Your Staked Fur'/>
               <h2>{this.displayValue(userStakedTokenAmount)}</h2>
 
             </Card>
@@ -549,9 +556,9 @@ class Stake extends Component {
 
 
 
-            <Card inset className="stakeFur">
+            <Card dark outlined className="stakeFur">
 
-              <h5 className="h1Title" style={{ textSize: '2.5rem' }}>Stake your FUR</h5>
+              <ASCII className="ASCII" text="Stake Your FUR"  />
               <p>FUR Balance:</p>
               <h2>{this.displayValue(userTokenAmount)}</h2>
 
@@ -588,9 +595,9 @@ class Stake extends Component {
 
 
 
-            <Card inset className="stakeFur">
+            <Card dark outlined className="stakeFur">
 
-              <h5 className="h1Title">Your FUR Profit</h5>
+              <ASCII className="ASCII"  text='Your FUR Profit' />
 
               <p>
                 Profit Earned: <h2>{this.displayValue(userDividends)}</h2>
