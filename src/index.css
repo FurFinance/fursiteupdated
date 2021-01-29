@@ -1,21 +1,18 @@
 
 body {
   margin: 0;
+  width: auto;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e4ebf5;
-  
-  
- 
+  background-color: #e4ebf5; 
   background-size: cover;
 }
-
-
 
 .stakingWrapper {
   width: 30%;
 }
+
 .onoffswitch {
   width: 90px;
   -webkit-user-select: none;
@@ -92,16 +89,12 @@ body {
 
 
 .ethKey {
-margin-top: 2.95%;
+ margin-top: 2.95%;
  height: 5%;
  width: 5%;
- 
-
-  
 }
 
 .input {
-
   border-radius: 2.5rem;
 }
 
@@ -110,18 +103,18 @@ margin-top: 2.95%;
   margin: .5rem;
 }
 
-.nav {
+.nav-bar {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  top: 0
 }
 
 .nt {
   height: 100%;
   background-color: #161b22;
   color: white;
- 
 }
 
 .br {
@@ -136,15 +129,23 @@ margin-top: 2.95%;
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
   right: 0px;
 }
+
 :root {
   --shadow-color: #ea00ff5b;
   --shadow-color-light: rgba(0, 136, 177, 0.493);
 } 
+
 .cyberspace {
   color: rgb(255, 83, 226);
   animation: neon .1s infinite;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-  
+}
+
+.mainCard .card {
+  margin: 10% auto 15%;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -166,3 +167,54 @@ margin-top: 2.95%;
     0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
   }
 }
+
+/* RESPONSIVE */
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+    
+  .nav-bar {
+    position: fixed;
+    width: 100%;   
+  }
+
+  .mainCard .card {
+    margin: 50% auto 15%;
+    height: 30rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) {
+
+  .nav-bar {
+      position: fixed;
+      width: 100%;   
+    }
+
+  .mainCard .card {
+      margin: 40% auto;
+      height: 30rem;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+
+/* @media only screen 
+  and (min-device-width: 768px) {
+
+  .mainCard .card {
+      height: 35rem;
+      width: 100%;
+      padding-top: 10%;
+      margin: 30% auto;
+    }
+  } */
+
+
