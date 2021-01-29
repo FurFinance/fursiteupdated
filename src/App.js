@@ -69,7 +69,9 @@ function App() {
 
 
   return (
-    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative' }}>
+
+    <div className="container">
+    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative', backgroundSize: '100%' }}>
        <Context.Provider
         value={{
           maskProvider,
@@ -79,14 +81,12 @@ function App() {
           connectMetaMask,
         }}
       />
-  
+
       <Router>
-    
-        <Navbar isNight={isNight} setNight={setNight} maskAccount={maskAccount}>
-          
-        </Navbar>
-        
-        
+        <div className="nav-bar">
+          <Navbar isNight={isNight} setNight={setNight} maskAccount={maskAccount} />
+        </div>   
+        <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route
@@ -108,12 +108,10 @@ function App() {
             <Route component={Error404} />
           </Switch>
         </Suspense>
-      
-        
+        </div>
       </Router>
-      
     </div>
-
+    </div>
   );
 }
 

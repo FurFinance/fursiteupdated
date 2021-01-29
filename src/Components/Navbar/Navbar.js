@@ -28,20 +28,11 @@ const DarkmodeNav = (props) => {
   return (
     <nav>
       <div>
-
-
         <nav-links>
-
-          <ul className="nav">
-              
-
+          <ul className="nav-link">
             <li>
               <Link style={{ color: "rgb(15, 224, 15)" }} to="/">HELLO</Link>
             </li>
-
-
-
-
             <li>
               <a
                 style={{ color: "rgb(15, 224, 15)" }}
@@ -62,14 +53,14 @@ const DarkmodeNav = (props) => {
                 FARMS
               </a>
             </li>
-
+{/* 
             <Switch color="green" onClick={e => setNight(!isNight)} className="onoffswitch">
               <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
               <label className="onoffswitch-label" htmlFor="myonoffswitch">
                 <span className="onoffswitch-inner"></span>
                 <span className="onoffswitch-switch"></span>
               </label>
-            </Switch>
+            </Switch> */}
 
             {/* </>
             )}

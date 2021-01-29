@@ -20,7 +20,6 @@ nav {
     color: green;
     font-style: italic;
     width: 100%;
-    // border: 2px solid red;
     display: flex;
     justify-content: center;
     
@@ -100,41 +99,54 @@ nav-links ul li a:hover {
 
 //responsive
 
-@media screen and (max-width: 800px) {
+// @media only screen 
+//     and (min-device-width: 375px) 
+//     and (min-device-height: 812px) 
+//     and (-webkit-device-pixel-ratio: 3)
+//     and (orientation: portrait) { 
+    
+//   .nav-bar {
+//     border: 1px solid blue;
+//     width: auto;
+//   }
 
-    Switch {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0px 20px 0px;     
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0px 20px 0px;
-    }
-    ul {
-        padding-top: 10px;
-    }
-    nav-links ul li {
-        margin: 0px 12px 0px 12px;
-    }
-    nav img {
-        padding-right: 0px;
-    }
-}
+// }
 
-//working on 450px and smaller
+// @media screen and (max-width: 800px) {
 
-@media screen and (max-width: 450px) {
-    nav-links ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+//     Switch {
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 20px 0px 20px 0px;     
+//     }
+//     nav {
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 20px 0px 20px 0px;
+//     }
+//     ul {
+//         padding-top: 10px;
+//     }
+//     nav-links ul li {
+//         margin: 0px 12px 0px 12px;
+//     }
+//     nav img {
+//         padding-right: 0px;
+//     }
+// }
 
-    nav-links ul li {
-        padding: 5px 0px 5px 0px;
-    }
-}
+// //working on 450px and smaller
+
+// @media screen and (max-width: 450px) {
+//     nav-links ul {
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//     }
+
+//     nav-links ul li {
+//         padding: 5px 0px 5px 0px;
+//     }
+// }

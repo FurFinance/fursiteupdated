@@ -152,30 +152,26 @@ font-size: 10px;
     display: flex;
     margin-bottom: -5%;
     justify-content: space-around;
-    
     margin: 5px;
     margin-top: 2.5rem;
 
   
 }
 .homeCard {
-    
     margin: 0 auto;
     margin-left: 32.5%;
     width: 35%;
     height: 35%;
-    padding-bottom: -50%;
+    // padding-bottom: -50%;
     margin-top: 3rem;
     padding: 1rem;
-    
-  
 }
 
 .centered {
     display: block;
-    
     margin: 0 auto;
 }
+
 .pubKey {
     animation: color-change 5s infinite;
     margin: 0 auto;
@@ -208,40 +204,40 @@ font-size: 10px;
 
 //responsive for title + subtitle
 
-@media screen and (max-width: 800px) {
-    .title h1 {
-        font-size: 5rem;
-        letter-spacing: 0.6rem;
-    }
-    .title p {
-        font-size: 0.9rem;
-        letter-spacing: 0.1rem;
-    }
-}
+// @media screen and (max-width: 800px) {
+//     .title h1 {
+//         font-size: 5rem;
+//         letter-spacing: 0.6rem;
+//     }
+//     .title p {
+//         font-size: 0.9rem;
+//         letter-spacing: 0.1rem;
+//     }
+// }
 
-@media screen and (max-width: 450px) {
-    .title h1 {
-        font-size: 3.2rem;
-        letter-spacing: 0.45rem;
-    }
-    .title p {
-        font-size: 0.6rem;
-        letter-spacing: 0.1rem;
-    }
-}
+// @media screen and (max-width: 450px) {
+//     .title h1 {
+//         font-size: 3.2rem;
+//         letter-spacing: 0.45rem;
+//     }
+//     .title p {
+//         font-size: 0.6rem;
+//         letter-spacing: 0.1rem;
+//     }
+// }
 
 //responsive for phones
 
-@media screen and (max-height: 700px) {
-    .testingthespace {
-        margin-top: 0px;
-    }
-}
-@media screen and (max-height: 568px) {
-    .testingthespace {
-        margin-top: 0px;
-    }
-}
+// @media screen and (max-height: 700px) {
+//     .testingthespace {
+//         margin-top: 0px;
+//     }
+// }
+// @media screen and (max-height: 568px) {
+//     .testingthespace {
+//         margin-top: 0px;
+//     }
+// }
 
 //here start the styleing for the second content section
 
@@ -250,57 +246,57 @@ font-size: 10px;
 
 //centering the content
 
-.future {
-    position: absolute;
-    left: -1000%;
-    right: -1000%;
-    top: -500%;
-    bottom: -1000%;
-    margin: auto;
+// .future {
+//     position: absolute;
+//     left: -1000%;
+//     right: -1000%;
+//     top: -500%;
+//     bottom: -1000%;
+//     margin: auto;
    
   
-}
+// }
 
 
-    .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-top: -50px;
-        margin-left: -100px;
-      }
+//     .centered {
+//         position: fixed;
+//         top: 50%;
+//         left: 50%;
+//         margin-top: -50px;
+//         margin-left: -100px;
+//       }
 
-.starsWrapper {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0.5rem;
-    border-radius: 3rem;
-    max-width: 1300px;
-    margin: auto;
-    text-align: center;
-    font-family: $thirdFont;
-    flex-direction: column;
-    align-items: center;
-    font-size: 7rem;
-    letter-spacing: 0.45rem;
-}
+// .starsWrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+//     padding: 0.5rem;
+//     border-radius: 3rem;
+//     max-width: 1300px;
+//     margin: auto;
+//     text-align: center;
+//     font-family: $thirdFont;
+//     flex-direction: column;
+//     align-items: center;
+//     font-size: 7rem;
+//     letter-spacing: 0.45rem;
+// }
 
 
-.wrapper h3 {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    margin: 10px;
-    position: relative;
-}
+// .wrapper h3 {
+//     width: 250px;
+//     height: 250px;
+//     overflow: hidden;
+//     margin: 10px;
+//     position: relative;
+// }
 
-.tradeButtonParent {
-    text-align: center;
-    margin: 3px;
-    display: flex;
-    justify-content: space-between;
-    align-content: space-around;
-    margin: 1rem;
-    margin-top: 20%;
-}
+// .tradeButtonParent {
+//     text-align: center;
+//     margin: 3px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-content: space-around;
+//     margin: 1rem;
+//     margin-top: 20%;
+// }
