@@ -103,11 +103,12 @@ body {
   margin: .5rem;
 }
 
-.nav {
+.nav-bar {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  top: 0
 }
 
 .nt {
@@ -138,6 +139,13 @@ body {
   color: rgb(255, 83, 226);
   animation: neon .1s infinite;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.mainCard .card {
+  margin: 10% auto 15%;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -178,8 +186,35 @@ body {
     align-items: center;
     justify-content: center;
   }
-
-  .headline {
-    border: 1px solid red;
-  }
 }
+
+
+@media only screen 
+  and (min-device-width: 320px) {
+
+  .nav-bar {
+      position: fixed;
+      width: 100%;   
+    }
+
+  .mainCard .card {
+      margin: 40% auto;
+      height: 30rem;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+
+/* @media only screen 
+  and (min-device-width: 768px) {
+
+  .mainCard .card {
+      height: 35rem;
+      width: 100%;
+      padding-top: 10%;
+      margin: 30% auto;
+    }
+  } */
+
+
