@@ -22,6 +22,19 @@ $secondFont: "poppins", sans-serif;
   padding: 0;
 }
 
+.centerText {
+  float: left;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centerText2 {
+ 
+  text-align: center;
+  margin-right: 5%;
+  
+}
 
 .stakeHeader {
   display: flex;
@@ -31,16 +44,39 @@ $secondFont: "poppins", sans-serif;
   background: -webkit-linear-gradient(rgb(255, 45, 192), rgb(167, 0, 139));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-smooth: never;
+  
 -webkit-font-smoothing : none;
 }
 
 .food {
-  
-  margin-left: -15%;
-  max-width: 100%;
-  height: 100%;
+  width: 38%;
+  height: 90%;
+  float: left;
+  margin-left: -5%;
+  margin-bottom: 10%;
+ 
 }
+.food2 {
+  
+  width: 42%;
+  height: 75%;
+  
+  margin-left: 1%;
+  margin-bottom: 10%;
+}
+
+.food3 {
+ 
+  width: 44%;
+  height: 83%;
+  margin-right: 13%;
+  margin-left: 3%;
+ 
+  
+} 
+
+
+
 
 .stakeText {
 
@@ -51,31 +87,41 @@ $secondFont: "poppins", sans-serif;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 1rem;
+  
  
   
 }
 
+  
+
+
+
 .cardWrapper {
+  border: 2px solid red;
   text-align: center;
   background-color: transparent;
   margin: 0 auto;
-  margin-top: 1%;
   padding: 2.5rem;
+  margin-bottom: -5%;
   width: 40%;
 }
 
-
+.inputWrapper {
+  float: right;
+  border: 2px solid red;
+}
 
 .sectionWrapperTest {
+  border: 2px solid red;
   background-color: transparent;
- 
   display: flex; 
   text-align: center;
   flex-direction: column;
-  width: 80%;
-  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 1rem;
+  height: 50%;
+  
   
   
   
@@ -116,8 +162,8 @@ h2 {
 }
 
 .bottom {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  
+ 
 }
 
 .infopannel input {
@@ -193,9 +239,10 @@ h2 {
 }
 
 .input {
-  
+  text-shadow: white;
+  color: white;
   text-align: center;
-  border: .1px solid grey;
+  border: .1px solid rgb(255, 255, 255);
   background-color: transparent;
 }
 
@@ -212,14 +259,46 @@ h2 {
   width: 0%;
 }
 
-.catEatHeart {
-  border: 2px solid red;
- 
-}
 
 .farmBtn {
-  margin: 1%;
-  color: lime;
+  margin: 3%;
+  color: #000000;
+  cursor: pointer;
+  background-image: url(../images/BUTTON1.png);
+  background-color: transparent;
+  width: 5.1rem;
+  height: 1.6rem;
+  box-shadow: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+    outline: black;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 230, 0);
+  font-size: .75rem;
+  opacity: 1; /* Firefox */
+  font-family: 'Press Start 2P', cursive;
+  outline: transparent;
+  border: 0;
+}
+
+.farmBtn2 {
+  margin: 3%;
+  color: #000000;
+  cursor: pointer;
+  background-image: url(../images/BUTTON2.png);
+  background-color: transparent;
+  width: 5.1rem;
+  height: 1.6rem;
+  box-shadow: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+    outline: black;
 }
 
 @keyframes color-change {
@@ -240,15 +319,67 @@ h2 {
   
 }
 
-.stakeFur1 {
+.stakeFur1 { 
   display: flex;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
   flex-direction: row-reverse;
-  background-image: linear-gradient(to left, red , rgb(255, 230, 0));
+  background-image: url(../images/N1.png);
+  background-size: contain;
   padding: 1rem;
-  border: 2px solid rgb(0, 0, 0);
-  border-right: 0;
+  height: 18rem;
+  background-repeat:no-repeat;
+  margin-bottom: -2%;
   
+}
+
+
+.stakeFur2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  background-image: url(../images/N2.png);
+  background-size: contain;
+
+  height: 18rem;
+  background-repeat:no-repeat;
+  margin-bottom: -2%;
+ 
+  
+  
+}
+
+.stakeFur3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  background-image: url(../images/N3.png);
+  background-size: contain;
+
+  height: 20rem;
+  background-repeat:no-repeat;
+  margin-bottom: -1%;
+ 
+}
+
+.stakeFur4 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  background-image: url(../images/N4.png);
+  background-size: contain;
+  
+  height: 20rem;
+  background-repeat:no-repeat;
+  
+
 }
 
 .stakeNumber {
@@ -259,6 +390,10 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 2rem;
+}
+
+.farmBtn1 {
+  
 }
 //responsive
 
