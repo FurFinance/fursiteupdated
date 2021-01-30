@@ -99,16 +99,18 @@ body {
 }
 
 .ASCII {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: .5rem;
 }
 
 .nav-bar {
   margin: 0 auto;
+  margin-bottom: -5rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  top: 0
+  top: 0;
+  position: fixed;
 }
 
 .nt {
@@ -142,13 +144,11 @@ body {
 }
 
 .mainCard .card {
-  margin: 10% auto 15%;
+  margin: 7% auto 15%;
   height: 30rem;
   align-items: center;
   justify-content: center;
 }
-
-
 
 @keyframes neon {
   0% {
@@ -205,16 +205,23 @@ body {
     }
 }
 
+@media screen and (max-width: 319px) {
+  .nav-bar {
+      margin-left: 23%;
+  }
+}
 
-/* @media only screen 
+
+@media only screen 
   and (min-device-width: 768px) {
 
   .mainCard .card {
-      height: 35rem;
+      height: 38rem;
       width: 100%;
-      padding-top: 10%;
-      margin: 30% auto;
+      padding-top: 3%;
+      margin: 25% auto;
     }
-  } */
+  }
+
 
 

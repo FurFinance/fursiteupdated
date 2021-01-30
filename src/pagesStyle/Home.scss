@@ -63,11 +63,12 @@ a {
   height: 27.5rem;
 }
 
-.card {
+.mainCard .card {
     background-color: transparent;
     text-align:center;
-    margin-left: 3.5%;
-    margin-top: -8%;
+    height: 37.5rem;
+    margin-top: 6%;
+    margin-bottom: 5%;
 }
 //title section
 .title {
@@ -180,7 +181,6 @@ font-size: 10px;
 }
 
 .headline {
-
     margin-top: 7%;
     
 }
@@ -204,16 +204,24 @@ font-size: 10px;
 
 //responsive for title + subtitle
 
-// @media screen and (max-width: 800px) {
-//     .title h1 {
-//         font-size: 5rem;
-//         letter-spacing: 0.6rem;
-//     }
-//     .title p {
-//         font-size: 0.9rem;
-//         letter-spacing: 0.1rem;
-//     }
-// }
+@media screen and (max-width: 900px) {
+    .mainCard .card {
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainCard .card {
+        margin-top: 15%;
+        padding-top: 4%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mainCard .card {
+        margin-top: 30%;
+    }
+}
 
 // @media screen and (max-width: 450px) {
 //     .title h1 {
