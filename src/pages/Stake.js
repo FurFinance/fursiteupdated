@@ -2,7 +2,10 @@ import React, { Component } from "react";
 
 //import styleing
 import "../pagesStyle/Stake.scss";
+import N1 from '../images/N1.png'
 import FOOD from '../images/FOOD.png'
+import FOOD2 from '../images/FOOD2.png'
+import FOOD3 from '../images/FOOD3.png'
 import { Card, Button, TextArea } from 'ui-neumorphism'
 import 'ui-neumorphism/dist/index.css'
 import ASCII from 'react-rainbow-ascii'
@@ -526,16 +529,16 @@ class Stake extends Component {
           <h2 className="stakeHeader">{'Vending Machine'.toUpperCase()}</h2>
 
           <Card className="sectionWrapperTest">
-          
 
-            <Card dark className="stakeFur1" >
-            <div className="centerText">
-              <span className="stakeText">{'All Staked FUR'.toUpperCase()}</span>
-              
-              <h1 className="stakeNumber">{this.displayValue(totalTokenStaked)}</h1>
+
+            <div dark className="stakeFur1" >
+              <div className="centerText">
+                <span className="stakeText">{'All Staked FUR'.toUpperCase()}</span>
+
+                <h1 className="stakeNumber">{this.displayValue(totalTokenStaked)}</h1>
               </div>
               <img src={FOOD} className="food" />
-            </Card >
+            </div >
 
 
 
@@ -543,11 +546,13 @@ class Stake extends Component {
 
 
 
-            <Card dark outlined className="stakeFur">
-            <ASCII className="ASCII"  text='Your Staked Fur'/>
-              <h2>{this.displayValue(userStakedTokenAmount)}</h2>
-
-            </Card>
+            <div dark className="stakeFur2">
+              <div className="centerText">
+                <span className="stakeText">{'Your Staked Fur'.toUpperCase()}</span>
+                <h1 className="stakeNumber">{this.displayValue(userStakedTokenAmount)}</h1>
+              </div>
+              <img src={FOOD2} className="food2" />
+            </div>
 
 
 
@@ -556,90 +561,96 @@ class Stake extends Component {
 
 
 
-            <Card dark outlined className="stakeFur">
+            <div className="stakeFur3">
+              <div className="centerText2">
+                <span className="stakeText">{"FUR Balance:".toUpperCase()}</span>
 
-              <ASCII className="ASCII" text="Stake Your FUR"  />
-              <p>FUR Balance:</p>
-              <h2>{this.displayValue(userTokenAmount)}</h2>
+                <h1 className="stakeNumber">{this.displayValue(userTokenAmount)}</h1>
 
+                <input
+                  className="input"
+                  id="amountToStake"
+                  placeholder="AMOUNT"
+                  value={amountToStake}
+                  onChange={this.handleChange}
 
-              <input
-                className="input"
-                id="amountToStake"
-                placeholder="Amount"
-                value={amountToStake}
-                onChange={this.handleChange}
-              />
+                />
 
-              <div className="stakingCard">
-                <Button depressed
-                  className="farmBtn"
-                  // TODO do better type check here, right now userTokenAmount is a string
-                  disabled={userTokenAmount == 0}
-                  onClick={this.handleSetAllToStake}
+                <div className="stakingCard">
+                  <button
+                    className="farmBtn"
+                    // TODO do better type check here, right now userTokenAmount is a string
+                    disabled={userTokenAmount == 0}
+                    onClick={this.handleSetAllToStake}
 
-                >
-                  All
-              </Button>
-                <Button
-                  className="farmBtn"
-                  disabled={amountToStake === 0 || amountToStake === ""}
-                  onClick={this.handleSteak}
-                >
-                  Stake
-              </Button>
+                  >
+
+                  </button>
+                  <button
+                    className="farmBtn2"
+                    disabled={amountToStake === 0 || amountToStake === ""}
+                    onClick={this.handleSteak}
+                  >
+
+                  </button>
+                </div>
+
               </div>
-            </Card>
+              <img src={FOOD3} className="food3" />
+
+            </div>
 
 
 
 
 
-            <Card dark outlined className="stakeFur">
+            <div className="stakeFur4">
 
-              <ASCII className="ASCII"  text='Your FUR Profit' />
+
 
               <p>
                 Profit Earned: <h2>{this.displayValue(userDividends)}</h2>
               </p>
-              <input
-                className="input"
-                id="amountToUnstake"
-                placeholder="FUR to withdraw"
-                value={amountToUnstake}
-                onChange={this.handleChange}
-              />
+              <div className="field">
+                <input
+                  className="input"
+                  id="amountToUnstake"
+                  placeholder="FUR to withdraw"
+                  value={amountToUnstake}
+                  onChange={this.handleChange}
+                />
+              </div>
               <div className="stakingCard">
-                <Button // TODO do better type check here, right now userStakedTokenAmount is a string
+                <button // TODO do better type check here, right now userStakedTokenAmount is a string
                   disabled={userStakedTokenAmount == 0}
                   onClick={this.handleSetAllToWithdraw}
-                  className="farmBtn"
+                  className="farmBtn1"
                 >
                   All
-                </Button>
+                </button>
 
-                <Button // TODO do better type check here, right now userDividends is a string
+                <button // TODO do better type check here, right now userDividends is a string
                   disabled={userDividends == 0}
                   onClick={this.handleCollect}
-                  className="farmBtn"
+                  className="farmBtn2"
                 >
                   Collect
-                </Button>
+                </button>
 
 
 
 
-                <Button style={{ marginBottom: '12px' }}
+                <button style={{ marginBottom: '12px' }}
                   disabled={amountToUnstake === 0 || amountToUnstake === ""}
                   onClick={this.handleUnstake}
                   className="farmBtn"
                 >
                   Withdraw
-              </Button>
+              </button>
 
               </div>
 
-            </Card>
+            </div>
           </Card>
         </Card>
 

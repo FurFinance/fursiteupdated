@@ -83,9 +83,9 @@ function App() {
       />
 
       <Router>
-        <div className="nav-bar">
+        {/* <div className="nav-bar">
           <Navbar isNight={isNight} setNight={setNight} maskAccount={maskAccount} />
-        </div>   
+        </div>    */}
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
