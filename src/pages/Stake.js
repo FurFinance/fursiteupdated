@@ -548,7 +548,7 @@ class Stake extends Component {
 
 
             <div dark className="stakeFur2">
-              <div className="centerText">
+              <div className="centerText2">
                 <span className="stakeText2">{'Your Staked Fur'.toUpperCase()}</span>
                 <h1 className="stakeNumber2">{this.displayValue(userStakedTokenAmount)}</h1>
               </div>
@@ -563,11 +563,11 @@ class Stake extends Component {
 
 
             <div className="stakeFur3">
-              <div className="centerText2">
+              <div className="centerText3">
 
                 <span className="stakeText3">{"FUR Balance:".toUpperCase()}</span>
 
-                <h1 className="stakeNumber">{this.displayValue(userTokenAmount)}</h1>
+                <h1 className="stakeNumber3">{this.displayValue(userTokenAmount)}</h1>
 
                 <input
                 type="number"
@@ -608,7 +608,7 @@ class Stake extends Component {
 
 
             <div className="stakeFur4">
-
+              <div className="centerText4">
               <div className="stakeText4">
                 <h3 className="furProfit">YOUR FUR PROFIT</h3>
                 <div></div>
@@ -657,6 +657,7 @@ class Stake extends Component {
                   </button>
                 </div>
 
+              </div>
               </div>
               <img src={FOOD4} className="food4" />
             </div>
