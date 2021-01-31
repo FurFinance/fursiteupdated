@@ -6,6 +6,7 @@ import N1 from '../images/N1.png'
 import FOOD from '../images/FOOD.png'
 import FOOD2 from '../images/FOOD2.png'
 import FOOD3 from '../images/FOOD3.png'
+import FOOD4 from '../images/FOOD99.png'
 import { Card, Button, TextArea } from 'ui-neumorphism'
 import 'ui-neumorphism/dist/index.css'
 import ASCII from 'react-rainbow-ascii'
@@ -548,8 +549,8 @@ class Stake extends Component {
 
             <div dark className="stakeFur2">
               <div className="centerText">
-                <span className="stakeText">{'Your Staked Fur'.toUpperCase()}</span>
-                <h1 className="stakeNumber">{this.displayValue(userStakedTokenAmount)}</h1>
+                <span className="stakeText2">{'Your Staked Fur'.toUpperCase()}</span>
+                <h1 className="stakeNumber2">{this.displayValue(userStakedTokenAmount)}</h1>
               </div>
               <img src={FOOD2} className="food2" />
             </div>
@@ -563,11 +564,13 @@ class Stake extends Component {
 
             <div className="stakeFur3">
               <div className="centerText2">
-                <span className="stakeText">{"FUR Balance:".toUpperCase()}</span>
+
+                <span className="stakeText3">{"FUR Balance:".toUpperCase()}</span>
 
                 <h1 className="stakeNumber">{this.displayValue(userTokenAmount)}</h1>
 
                 <input
+                type="number"
                   className="input"
                   id="amountToStake"
                   placeholder="AMOUNT"
@@ -587,7 +590,7 @@ class Stake extends Component {
 
                   </button>
                   <button
-                    className="farmBtn2"
+                    className="farmBtn7"
                     disabled={amountToStake === 0 || amountToStake === ""}
                     onClick={this.handleSteak}
                   >
@@ -606,50 +609,56 @@ class Stake extends Component {
 
             <div className="stakeFur4">
 
-
-
-              <p>
-                Profit Earned: <h2>{this.displayValue(userDividends)}</h2>
-              </p>
-              <div className="field">
-                <input
-                  className="input"
-                  id="amountToUnstake"
-                  placeholder="FUR to withdraw"
-                  value={amountToUnstake}
-                  onChange={this.handleChange}
-                />
+              <div className="stakeText4">
+                <h3 className="furProfit">YOUR FUR PROFIT</h3>
+                <div></div>
+                <div></div>
+                <span className="stakeText3">
+                  PROFIT EARNED <h3 className="stakeNumber4">{this.displayValue(userDividends)}</h3>
+                </span>
+                <div className="field">
+                  <input
+                    type="number"
+                    className="input"
+                    id="amountToUnstake"
+                    placeholder="WITHDRAW"
+                    value={amountToUnstake}
+                    onChange={this.handleChange}
+                  />
+                </div>
               </div>
               <div className="stakingCard">
-                <button // TODO do better type check here, right now userStakedTokenAmount is a string
-                  disabled={userStakedTokenAmount == 0}
-                  onClick={this.handleSetAllToWithdraw}
-                  className="farmBtn1"
-                >
-                  All
-                </button>
+                <div className="centerBtns">
+                  <button // TODO do better type check here, right now userStakedTokenAmount is a string
+                    disabled={userStakedTokenAmount == 0}
+                    onClick={this.handleSetAllToWithdraw}
+                    className="farmBtn1"
+                  >
 
-                <button // TODO do better type check here, right now userDividends is a string
-                  disabled={userDividends == 0}
-                  onClick={this.handleCollect}
-                  className="farmBtn2"
-                >
-                  Collect
-                </button>
+                  </button>
+
+                  <button // TODO do better type check here, right now userDividends is a string
+                    disabled={userDividends == 0}
+                    onClick={this.handleCollect}
+                    className="farmBtn2"
+                  >
+
+                  </button>
 
 
 
 
-                <button style={{ marginBottom: '12px' }}
-                  disabled={amountToUnstake === 0 || amountToUnstake === ""}
-                  onClick={this.handleUnstake}
-                  className="farmBtn"
-                >
-                  Withdraw
-              </button>
+                  <button style={{ marginBottom: '12px' }}
+                    disabled={amountToUnstake === 0 || amountToUnstake === ""}
+                    onClick={this.handleUnstake}
+                    className="farmBtn3"
+                  >
+
+                  </button>
+                </div>
 
               </div>
-
+              <img src={FOOD4} className="food4" />
             </div>
           </Card>
         </Card>
