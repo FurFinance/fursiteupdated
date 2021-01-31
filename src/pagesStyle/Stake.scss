@@ -30,10 +30,22 @@ $secondFont: "poppins", sans-serif;
 }
 
 .centerText2 {
- 
+  float: left;
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  margin-right: 14%;
-  
+}
+
+.centerText3 {
+  text-align: center;
+  margin-right: 11%;
+}
+
+.centerText4 {
+  text-align: center;
+  margin-right: 5%;
+  margin-bottom: 13.5rem;
+  height: 6rem;
 }
 
 .stakeHeader {
@@ -140,8 +152,10 @@ $secondFont: "poppins", sans-serif;
   background-color: transparent;
   margin: 0 auto;
   padding: 2.5rem;
-  margin-bottom: -5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 40%;
+  height: 80rem;
 }
 
 .inputWrapper {
@@ -155,7 +169,7 @@ $secondFont: "poppins", sans-serif;
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  height: 50%;
+  height: 70rem;
 }
 
 .profitEarned {
@@ -409,8 +423,8 @@ h2 {
 .centerBtns {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
-  margin-left: 1%;
+  margin-top: -3.2rem;
+  margin-left: -1rem;
   position: absolute;
 }
 
@@ -456,13 +470,9 @@ h2 {
   flex-direction: row-reverse;
   background-image: url(../images/N2.png);
   background-size: contain;
-
   height: 18rem;
   background-repeat:no-repeat;
-  margin-bottom: -2%;
- 
-  
-  
+  margin-bottom: 0%;
 }
 
 .stakeFur3 {
@@ -473,10 +483,9 @@ h2 {
   flex-direction: row-reverse;
   background-image: url(../images/N3.png);
   background-size: contain;
-
   height: 20rem;
   background-repeat:no-repeat;
-  margin-bottom: -1%;
+  margin-bottom: 3%;
  
 }
 
@@ -488,10 +497,8 @@ h2 {
   flex-direction: row-reverse;
   background-image: url(../images/N4.png);
   background-size: contain;
-  
   height: 20rem;
   background-repeat:no-repeat;
-  
 
 }
 
@@ -514,6 +521,18 @@ h2 {
   -webkit-text-fill-color: transparent;
   margin-top: 2rem;
   margin-right: 20%;
+}
+
+.stakeNumber3 {
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7rem;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 7%;
+  margin-top: 15%;
+  margin-bottom: 8%;
 }
 
 
@@ -540,5 +559,182 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 375px) {
+  .cardWrapper {
+      width: 90%;
+      margin-top: 5%;
+      height: 50rem;
+  }
+
+  .stakeHeader {
+    font-size: 1.3rem;
+    margin-bottom: 4%;
+  }
+
+  .sectionWrapperTest {
+    width: 100%;
+    height: 37.8rem;
+  }
+
+  .furProfit {
+    width: 10rem;
+    font-size: 0.5rem;
+  }
+
+  .stakeFur1 {
+    display: flex;
+    background-size: 16rem;
+    height: 10rem;
+  }
+
+  .stakeFur2 {
+    display: flex;
+    background-size: 16rem;
+    height: 10rem;
+  }
+
+  .stakeFur3 {
+    display: flex;
+    background-size: 16rem;
+    height: 10rem;
+  }
+
+  .stakeFur4 {
+    display: flex;
+    background-size: 16rem;
+    height: 9rem;
+  }
+
+  .stakeText {
+    font-size: 0.7rem;
+  }
+
+  .stakeText2 {
+    font-size: 0.6rem;
+  }
+
+  .stakeText3 {
+    font-size: 0.6rem;
+    margin-right: 10%;
+  }
+
+  .stakeText4 {
+    font-size: 0.7rem;
+  }
+
+  .stakeNumber {
+    font-size: 3.5rem;
+    margin-top: 9%;
+  }
+
+  .stakeNumber2 {
+    font-size: 3.5rem;
+    margin-top: 13%;
+  }
+
+  .stakeNumber3 {
+    font-size: 3.5rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+  }
+
+  .stakeNumber4 {
+    font-size: 2.5rem;
+    margin-bottom: -5%;
+  }
+
+  .food {
+    height: 7rem;
+  }
+
+  .food2 {
+    height: 7.5rem;
+    padding-bottom: 5%;
+  }
+
+  .food3 {
+    height: 7.5rem;
+    margin-top: 7%;
+  }
+
+  .food4 {
+    height: 7.5rem;
+    margin-top: 8%;
+    margin-right: -13%;
+  }
+
+  .centerText {
+    padding-bottom: 10%;
+  }
+
+  .centerText2 {
+    padding-bottom: 15%;
+  }
+
+  .centerText3 {
+    height: 9.3rem;
+    margin-right: -4.5%;
+  }
+
+  .centerText4 {
+    height: 9.3rem;
+    margin-top: 13rem;
+    margin-right: 3%;
+    margin-left: 10%;
+  }
+
+  .stakeFur3 .stakingCard {
+    margin-top: 1%;
+    margin-left: -2%;
+  }
+
+  .stakeFur4 .stakeText3 {
+    font-size: 0.5rem;
+  }
+
+  .stakeFur3 .input {
+    width: 6rem;
+    margin-right: 9%;
+  }
+
+  .stakeFur4 .input {
+    width: 5rem;
+    margin-bottom: 13%;
+  }
+
+  .stakeFur4 ::placeholder {
+    font-size: 0.5rem;
+  }
+
+  .farmBtn {
+    height: 1.3rem;
+    width: 4rem;
+  }
+
+  .farmBtn7 {
+    height: 1.3rem;
+    width: 4rem;
+  }
+
+  .farmBtn1 {
+    height: 1.2rem;
+    width: 2rem;
+    margin-left: 6%;
+  }
+
+  .farmBtn2 {
+    height: 1.2rem;
+    width: 4rem;
+  }
+
+  .farmBtn3 {
+    height: 1.2rem;
+    width: 5rem;
+    margin-right: 9%;
+  }
+
 }
 
