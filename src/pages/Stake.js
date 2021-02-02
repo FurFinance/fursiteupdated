@@ -570,7 +570,7 @@ class Stake extends Component {
                 <h1 className="stakeNumber3">{this.displayValue(userTokenAmount)}</h1>
 
                 <input
-                  type="number"
+                type="number"
                   className="input"
                   id="amountToStake"
                   placeholder="AMOUNT"
