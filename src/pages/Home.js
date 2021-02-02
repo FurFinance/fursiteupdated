@@ -19,32 +19,24 @@ import text from '../images/TEXT.png'
 
 const Home = ({ Title, subTitle, isNight, maskAccount }) => {
   return (
-    <div className="mainCard">
-
-      <Card className="card">
-
-        <h1 className="pubKey">fur.finance</h1>
-     
-        <img src={purr} width="140" height="60" />
-        <div></div>
-        <a href="https://app.fur.finance"><img className="catBowl" src={catbowl} width="400" height="200" /></a>
-        <div></div>
+      <div className="main">
+        <Card className="homeCard">
+          <h1 className="pubKey">fur.finance</h1>
+          <img src={purr} width="140" height="60" />
+        {/* <div></div> */}
+          <a href="https://app.fur.finance"><img className="bowl" src={catbowl} width="400" height="200" /></a>
+        {/* <div></div> */}
         <div className="menuBtn">
         <a href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`} style={{ color: 'lime' }}><Button depressed>💸 Trade</Button></a>
-          <Button><Link to={"/stake"} style={{ color: 'lime' }}>🥩 Stake</Link></Button>
-          <a href={`https://app.fur.finance`}style={{ color: 'lime' }}><Button>🧑‍🌾 Farm </Button></a>
+            <Button><Link to={"/stake"} style={{ color: 'lime' }}>🥩 Stake</Link></Button>
+            <a href={`https://app.fur.finance`}style={{ color: 'lime' }}><Button>🧑‍🌾 Farm </Button></a>
         </div>
-        <img className="headline"src={text} width="500" height="90" />
-        
-      
-
-        
-      </Card>
-    </div>
+        </Card>
+        <div>
+        <img className="header"src={text} width="500" height="90" />
+        </div>
+      </div>
   )
-
-
-
 };
 
 export default Home;
