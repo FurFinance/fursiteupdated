@@ -1,5 +1,34 @@
-/* 
-body {
+
+
+body > #root > div {
+  height: 100vh;
+}
+
+.dark-mode {
+  color: rgb(255, 255, 255);
+  background-color: #161b22;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .nt {
+  min-height: 100vh;
+  height: 0 auto;
+  background-color: #161b22;
+  color: white;
+} */
+
+/* body {
+
   margin: 0;
   width: auto;
   -webkit-font-smoothing: antialiased;
@@ -99,7 +128,9 @@ body {
 
 .ASCII {
 
-  margin: .5rem;
+  /* border: 2px solid red; */
+  /* margin: .5rem;
+
 }
 
 .nav-bar {
@@ -170,6 +201,9 @@ body {
 
 
 
+
+
+
 @media only screen 
   and (min-device-width: 320px) {
 
@@ -205,4 +239,6 @@ body {
   }
 
 
- */
+
+  }  */
+

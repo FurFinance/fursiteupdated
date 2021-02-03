@@ -104,27 +104,11 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
 
-html {
-    min-height: 100%;
-}
+// hello
 
-body {
-    min-height: 100%;
+.home-container {
+
     min-height: 100vh;
     background-color: #e4ebf5;
     background-size: cover;
