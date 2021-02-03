@@ -7,137 +7,96 @@
 //variables
 
 
-$font: 'Poppins',
-sans-serif !important;
-$secondFont: 'Noto Sans',
-sans-serif !important;
-$thirdFont: 'VT323',
-sans-serif !important;
+$font: 'Poppins', sans-serif !important;
+$secondFont: 'Noto Sans', sans-serif !important;
+$thirdFont: 'VT323', sans-serif !important;
 
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #e4ebf5; 
-    background-size: cover;
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 1 !important;
 }
 
-.home-container {
-    min-height: 100vh;
-    height: 0 auto;
-    width: 0 auto;
+.MetaMaskHomeButton {
+    font-family: $thirdFont;
+    font-size: 3rem;
+    padding: 1rem;
+    transition: 0.3s ease all;
+}
+
+a {
+    color: rgb(15, 224, 15);
+    -webkit-text-stroke-color: black;
+}
+
+
+.testingthespace {
+    margin-top: 0px;
+}
+
+
+.catGirl {
+    margin: 0 auto;
+}
+
+    .title {
+        width: 90%;
+        margin: auto;
+    }
+
+.mainContent {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    .home-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        width: 40%;
-        height: 50%;
-        padding-top: 1%;
-        padding-bottom: 3%;
-        background-color: transparent;
-
-        .pubKey {
-            animation: color-change 5s infinite;
-            font-size: 4.5rem;
-            font-family: $font;
-            font-weight: bold;
-        }
-
-        .purr-container {
-            text-align: center;
-
-            .purr-img {
-                width: 30%;
-            }
-        }
-
-        .bowl-container {
-            text-align: center;
-
-            .cat-bowl {
-                width: 70%;
-            }
-        }
-
-        .home-btns {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            margin-top: 5%;
-
-            .trade a {
-                color: #B832FB;
-            }
-
-            .stake a {
-                color: #32FB63;
-            }
-
-            .farm a {
-                color: #32ECFB;
-            }
-        }
-
-    }
-
-        .bottom-text {
-            width: 100%;
-            text-align: center;
-
-            .btm-txt {
-                width: 35%;
-            }
-    }
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 36rem;
+    height: 27.5rem;
+    
 }
 
+.mainCard {
+    display: flex;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0 auto;
+  
+  width: 36rem;
+  height: 27.5rem;
+}
 
-// [data-aos^=fade][data-aos^=fade] {
-//     opacity: 1 !important;
-// }
+.mainCard .card {
+    background-color: transparent;
+    text-align:center;
+    height: 37.5rem;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+//title section
+.title {
+    
+    margin-top: -90px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 75vh;
+}
 
-// .main {
-//     width: 0 auto;
-//     height: 0 auto;
-//     display: flex;
-//     flex-direction: column;
+.terminal {
+    display: flex;
+    justify-content: center;
+    height: 5px;
+    width: 400px;
+    
+    
+}
 
-//     .homeCard {
-//         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-//         font-weight: bold;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         width: 0 auto;
-//         height: 0 auto;
-//         margin: 0 auto;
-
-
-//         .menuBtn {
-//             display: flex;
-//             width: 100%;
-//         }
-//     }
-
-//     .header {
-//         margin: 0 auto;
-//         display: flex;
-//     }
-// }
-
-// a {
-//     color: rgb(15, 224, 15);
-//     -webkit-text-stroke-color: black;
-// }
-
+.h1Title {
+animation: color-change 5s infinite;
+font-size: 10px;
+}
 
 
 @keyframes color-change {
@@ -189,134 +148,163 @@ body {
   
 }
 
+.menuBtn {
+    
+    display: flex;
+    margin-bottom: -5%;
+    justify-content: space-around;
+    margin: 5px;
+    margin-top: 2.5rem;
 
-// .menuBtn {
-//     display: flex;
-//     margin-bottom: -5%;
-//     justify-content: space-around;
-//     margin: 5px;
-//     margin-top: 2.5rem;
-// }
+  
+}
+.homeCard {
+    margin: 0 auto;
+    margin-left: 32.5%;
+    width: 35%;
+    height: 35%;
+    // padding-bottom: -50%;
+    margin-top: 3rem;
+    padding: 1rem;
+}
 
-// .homeCard {
-//     margin: 0 auto;
-//     margin-left: 32.5%;
-//     width: 35%;
-//     height: 35%;
-//     margin-top: 3rem;
-//     padding: 1rem;
-// }
+.centered {
+    display: block;
+    margin: 0 auto;
+}
 
-// .pubKey {
-//     animation: color-change 5s infinite;
-//     margin: 0 auto;
-//     font-size: 4.5rem;
-//     text-align: center;
-// }
+.pubKey {
+    animation: color-change 5s infinite;
+    margin: 0 auto;
+    font-size: 4.5rem;
+    text-align: center;
+}
 
-// .catBowl:hover {
-//     transform: scale(1.1);
-//     transition: .5s;
-// }
+.headline {
+    margin-top: 7%;
+    
+}
 
-// @keyframes color-change {
-//     14% {
-//         color: rgb(37, 150, 150);
-//     }
-
-//     28% {
-//         color: rgb(224, 18, 196);
-//     }
-
-//     42% {
-//         color: rgb(190, 0, 0);
-//     }
-
-//     56% {
-//         color: rgba(0, 255, 0, 0.39);
-//     }
-
-//     70% {
-//         color: rgba(0, 0, 255, 0.589);
-//     }
-
-//     84% {
-//         color: indigo;
-//     }
-
-//     100% {
-//         color: rgba(238, 130, 238, 0.521);
-//     }
-
-// }
-
-
-// Responsive
-
-
-// @media screen and (max-width: 375px) {
-//     .home-card {
-//         border: 1px solid red;
-//         width: auto;
-//     }
-// }
-
-
-// @media only screen 
-//   and (min-device-width: 375px) {
-
-
-//     body {
-//         min-height: 100%;
-//         min-width: 100%;
-//     }
-
-// }
-
-// @media screen and (max-width: 319px) {
-//   .nav-bar {
-//       margin-left: 23%;
-//   }
-// }
-
-
-// @media only screen 
-//   and (min-device-width: 768px) {
-
-//   .mainCard .card {
-//       height: 38rem;
-//       width: 100%;
-//       padding-top: 3%;
-//       margin: 25% auto;
-//     }
-//   }
+.catBowl:hover {
+    transform: scale(1.1);
+    transition: .5s;    
+}
+@keyframes color-change {
+    14% { color: rgb(37, 150, 150); }
+    28% { color: rgb(224, 18, 196); }
+    42% { color: rgb(190, 0, 0); }
+    56% { color: rgba(0, 255, 0, 0.39); }
+    70% { color: rgba(0, 0, 255, 0.589); }
+    84% { color: indigo; }
+    100% { color: rgba(238, 130, 238, 0.521); }
+    
+  }
+//hover effects
 
 
 //responsive for title + subtitle
 
-// @media screen and (max-width: 900px) {
-//     .mainCard .card {
-//         margin-top: 9%;
+@media screen and (max-width: 900px) {
+    .mainCard .card {
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainCard .card {
+        margin-top: 15%;
+        padding-top: 4%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mainCard .card {
+        margin-top: 30%;
+    }
+}
+
+// @media screen and (max-width: 450px) {
+//     .title h1 {
+//         font-size: 3.2rem;
+//         letter-spacing: 0.45rem;
+//     }
+//     .title p {
+//         font-size: 0.6rem;
+//         letter-spacing: 0.1rem;
 //     }
 // }
 
-// @media screen and (max-width: 500px) {
-//     .mainCard .card {
-//         margin-top: 15%;
-//         padding-top: 4%;
+//responsive for phones
+
+// @media screen and (max-height: 700px) {
+//     .testingthespace {
+//         margin-top: 0px;
+//     }
+// }
+// @media screen and (max-height: 568px) {
+//     .testingthespace {
+//         margin-top: 0px;
 //     }
 // }
 
-// @media screen and (max-width: 425px) {
-//     .mainCard .card {
-//         margin-top: 30%;
-//     }
+//here start the styleing for the second content section
+
+//color of the second section on homepage
+
+
+//centering the content
+
+// .future {
+//     position: absolute;
+//     left: -1000%;
+//     right: -1000%;
+//     top: -500%;
+//     bottom: -1000%;
+//     margin: auto;
+   
+  
 // }
 
-// @media screen and (max-width: 375px) {
-//     .main {
-//         border: 1px solid red;
-//         width: 100%;
-//     }
+
+//     .centered {
+//         position: fixed;
+//         top: 50%;
+//         left: 50%;
+//         margin-top: -50px;
+//         margin-left: -100px;
+//       }
+
+// .starsWrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+//     padding: 0.5rem;
+//     border-radius: 3rem;
+//     max-width: 1300px;
+//     margin: auto;
+//     text-align: center;
+//     font-family: $thirdFont;
+//     flex-direction: column;
+//     align-items: center;
+//     font-size: 7rem;
+//     letter-spacing: 0.45rem;
 // }
 
+
+// .wrapper h3 {
+//     width: 250px;
+//     height: 250px;
+//     overflow: hidden;
+//     margin: 10px;
+//     position: relative;
+// }
+
+// .tradeButtonParent {
+//     text-align: center;
+//     margin: 3px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-content: space-around;
+//     margin: 1rem;
+//     margin-top: 20%;
+// }
