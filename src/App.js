@@ -5,41 +5,40 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import 'ui-neumorphism/dist/index.css'
 import Context from "./Context/ReactContext"; 
 import ReactTypingEffect from 'react-typing-effect';
-
+ 
 import DOS from 'figlet/importable-fonts/DOS Rebel'
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+ 
 import AOS from "aos";
 import "aos/dist/aos.css";
 //pages import
 import Home from "./pages/Home";
-
+//Navbar
 import { DarkmodeNav } from "./Components/Navbar/Navbar";
 import useDarkMode from './Hooks/useDarkMode';
-
-
+ 
 //Footer
 import BottomBar from "./Components/Footer/BottomBar";
 import { Suspense } from "react";
-
+ 
 const About = React.lazy(() => import("./pages/About"));
 /* const Blog = React.lazy(() => import("./pages/Blog")); */
 const Team = React.lazy(() => import("./pages/Team"));
 const Stake = React.lazy(() => import("./pages/Stake"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
 const Chart = React.lazy(() => import("./pages/Chart"));
-
+ 
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(false);
   const [maskProvider, setMaskProvider] = useState();
   const [maskAccount, setMaskAccount] = useState();
-
+ 
   useEffect(() => {
     AOS.init({
       duration: 2000,
     });
-
+ 
     const MetaMask = async () => {
       const MaskProvider = await detectEthereumProvider();
       if (MaskProvider) {
@@ -50,7 +49,7 @@ function App() {
     };
     MetaMask();
   }, []);
-
+ 
   const connectMetaMask = async () => {
     let pubKey;
     if (maskProvider) {
@@ -66,11 +65,9 @@ function App() {
       );
     }
   };
-
+ 
   return (
-
     <div className="container">
-    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative', backgroundSize: '100%' }}>
        <Context.Provider
         value={{
           maskProvider,
@@ -80,14 +77,12 @@ function App() {
           connectMetaMask,
         }}
       />
-
+ 
       <Router>
-
         <div className="nav-bar">
           <DarkmodeNav />
         </div>
-  
-
+ 
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
@@ -97,7 +92,7 @@ function App() {
                 <Home style={{color: "lime"}}
                   Title="fur.finance"
                   maskAccount={maskAccount}
-                  
+ 
                 />
               )}
               exact
@@ -112,10 +107,8 @@ function App() {
         </Suspense>
         </div>
       </Router>
-
-
     </div>
   );
 }
-
+ 
 export default App;
