@@ -13,13 +13,14 @@ $font: 'VT323', sans-serif;
     width: 40%;
     margin: 0 auto;
     margin-top: 2%;
+    margin-bottom: 5%;
 
     .dark-mode__toggle {
       margin: 0 auto;
       isolation: isolate;
       position: relative;
-      height: 30px;
-      width: 60px;
+      height: 20px;
+      width: 40px;
       border-radius: 15px;
       overflow: hidden;
       box-shadow:
@@ -67,6 +68,178 @@ $font: 'VT323', sans-serif;
     }
 
 
+    // RESPONSIVE
+
+    @media screen and (max-width: 2560px) {
+      .nav-container {
+
+          .nav-div {
+            margin-top: 10%;
+
+            .stakeBTN {
+              font-size: 4rem;
+            }
+          }
+      }
+  }
+
+  @media screen and (max-width: 1536px) {
+    .nav-container {
+        width: 50%;
+
+        .nav-div {
+          margin-top: 10%;
+
+          .stakeBTN {
+            font-size: 4rem;
+          }
+        }
+    }
+}
+
+  @media screen and (max-width: 1440px) {
+    .nav-container {
+        width: 50%;
+
+      .nav-div {
+        margin-top: 7%;
+        
+        .stakeBTN {
+          font-size: 3.5rem;
+        }
+      }
+    }
+}
+
+  @media screen and (max-width: 1368px) {
+    .nav-container {
+
+      .nav-div {
+        margin-top: 5%;
+
+        .stakeBTN {
+          font-size: 3rem;
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 1368px) {
+  .nav-container {
+    margin-bottom: 4%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-container {
+    width: 70%;
+
+    .nav-div {
+
+      .stakeBTN {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-container {
+    margin-top: 5%;
+    width: 85%;
+    
+      .nav-div {
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 2.5rem;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav-container {
+    margin-top: 5%;
+    width: 85%;
+    
+      .nav-div {
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 2.5rem;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .nav-container {
+    margin-top: 5%;
+    width: 85%;
+    
+      .nav-div {
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 3rem;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nav-container {
+    margin-top: 5%;
+    
+      .nav-div {
+        flex-direction: column;
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 2.3rem;
+        }
+      }
+  }
+}
+
+
+
+@media screen and (max-width: 411px) {
+  .nav-container {
+    margin-top: 5%;
+    
+      .nav-div {
+        flex-direction: column;
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 2.5rem;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .nav-container {
+
+      .nav-div {
+        flex-direction: column;
+        text-align: center;
+
+        .stakeBTN {
+          font-size: 2rem;
+        }
+      }
+  }
+}
 
 
 

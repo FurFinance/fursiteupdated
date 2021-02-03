@@ -34,17 +34,17 @@ const Home = () => {
           </a>
         </div>
         <div className="home-btns">
-          <a className="trade" href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`} >
+          <a className="trade" href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`} style={{ color: 'limegreen' }} >
             <Button depressed className="trade">
               💸 Trade
             </Button>
           </a>
             <Button className="stake">
-              <Link className="stake" to={"/stake"} >
+              <Link className="stake" to={"/stake"} style={{ color: 'limegreen' }} >
                 🥩 Stake
               </Link>
             </Button>
-          <a className="farm" href={`https://app.fur.finance`} >
+          <a className="farm" href={`https://app.fur.finance`} style={{ color: 'limegreen' }} >
             <Button>
               🧑‍🌾 Farm 
             </Button>
@@ -52,7 +52,9 @@ const Home = () => {
         </div>
       </Card>
       <div className="bottom-text">
-        <img className="btm-txt"src={ text } />
+        <p className="btm-txt">
+          Fur is the new money for decentralized cat treats
+        </p>
       </div>
 
     </div>
