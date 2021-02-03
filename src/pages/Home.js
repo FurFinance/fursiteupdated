@@ -19,6 +19,7 @@ import text from '../images/TEXT.png'
 
 const Home = () => {
   return (
+
     <div className="home-container">
       <Card className="home-card">
         <div className="home-header">
@@ -53,8 +54,12 @@ const Home = () => {
       <div className="bottom-text">
         <img className="btm-txt"src={ text } />
       </div>
+
     </div>
   )
+
+
+
 };
 
 export default Home;
