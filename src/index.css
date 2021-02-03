@@ -3,14 +3,28 @@ body > #root > div {
   height: 100vh;
 }
 
-.nt {
+.dark-mode {
+  color: rgb(255, 255, 255);
+  background-color: #161b22;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .nt {
   min-height: 100vh;
   height: 0 auto;
   background-color: #161b22;
   color: white;
-}
-
-
+} */
 
 /* body {
   margin: 0;
@@ -114,7 +128,7 @@ body > #root > div {
 
 .ASCII {
   /* border: 2px solid red; */
-  margin: .5rem;
+  /* margin: .5rem;
 }
 
 .nav-bar {
@@ -182,7 +196,7 @@ body > #root > div {
   }
 }
 
-/* RESPONSIVE */
+
 
 @media only screen 
     and (min-device-width: 375px) 
@@ -254,4 +268,4 @@ body > #root > div {
       margin: 25% auto;
     }
 
-  } */
+  }  */

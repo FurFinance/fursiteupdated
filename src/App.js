@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 import Home from "./pages/Home";
 //Navbar
 import { DarkmodeNav } from "./Components/Navbar/Navbar";
+import useDarkMode from './Hooks/useDarkMode';
 
 //Footer
 import BottomBar from "./Components/Footer/BottomBar";
@@ -29,7 +30,7 @@ const Error404 = React.lazy(() => import("./pages/Error404"));
 const Chart = React.lazy(() => import("./pages/Chart"));
 
 function App() {
-  const [isNight, setNight] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode(false);
   const [maskProvider, setMaskProvider] = useState();
   const [maskAccount, setMaskAccount] = useState();
 
@@ -64,13 +65,8 @@ function App() {
       );
     }
   };
- 
-
-
 
   return (
-
-    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative', backgroundSize: '100%' }}>
     <div className="container">
        <Context.Provider
         value={{
@@ -84,7 +80,8 @@ function App() {
 
       <Router>
         <div className="nav-bar">
-          <DarkmodeNav isNight={isNight} setNight={setNight} maskAccount={maskAccount} />
+          <DarkmodeNav />
+        </div>
   
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
@@ -109,10 +106,7 @@ function App() {
           </Switch>
         </Suspense>
         </div>
-        </div> 
       </Router>
-
-    </div>
     </div>
   );
 }

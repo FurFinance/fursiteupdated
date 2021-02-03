@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Navbar } from 'ui-neumorphism';
 import { Switch } from 'ui-neumorphism';
+import useDarkMode from '../../Hooks/useDarkMode';
 
 import 'ui-neumorphism/dist/index.css'
 
@@ -19,13 +20,23 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 
 export const DarkmodeNav = (props) => {
-  const { isNight, setNight } = props;
-  /*  var { maskProvider, maskAccount, maskName, parent } = props; */
 
-  /* var myContext = useContext(Context); */
+  const [darkMode, setDarkMode] = useDarkMode(true)
+
+  const toggleDarkMode = e => {
+    e.preventDefault();
+    document.body.classList.toggle("dark-mode");
+    setDarkMode(!darkMode)
+  }
 
   return (
     <div className="nav-container">
+      <div className="dark-mode__toggle">
+        <div
+          onClick={toggleDarkMode}
+          className={darkMode ? "toggle toggled" : "toggle"}
+        />
+      </div>
       <div className="nav-div">
         <div>
           <Link className="stakeBTN" style={{ color: "rgb(15, 224, 15)" }} to="/">HELLO</Link>
@@ -51,15 +62,6 @@ export const DarkmodeNav = (props) => {
             FARMS
           </a>
         </div>
-      </div>
-      <div className="darkmode-container">
-        <Switch color="green" onCdivck={e => setNight(!isNight)} className="onoffswitch">
-          <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
-          <label className="onoffswitch-label" htmlFor="myonoffswitch">
-            <span className="onoffswitch-inner"></span>
-            <span className="onoffswitch-switch"></span>
-          </label>
-        </Switch>
       </div>
     </div>
   )
