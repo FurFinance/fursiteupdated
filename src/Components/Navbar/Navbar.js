@@ -18,60 +18,51 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 //
 
 
-const DarkmodeNav = (props) => {
-  const { isNight, setNight, maskAccount } = props;
+export const DarkmodeNav = (props) => {
+  const { isNight, setNight } = props;
   /*  var { maskProvider, maskAccount, maskName, parent } = props; */
 
   /* var myContext = useContext(Context); */
 
-
   return (
-    <nav>
-      <div>
-        <nav-links>
-          <ul className="nav-link">
-            <li>
-              <Link style={{ color: "rgb(15, 224, 15)" }} to="/">HELLO</Link>
-            </li>
-            <li>
-              <a
-                style={{ color: "rgb(15, 224, 15)" }}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
-              >
-                TRADE
-              </a>
-            </li>
-            <li>
-              <Link style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" to="/stake">
-                VAULT
-              </Link>
-            </li>
-            <li>
-              <a style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" href="https://app.fur.finance">
-                FARMS
-              </a>
-            </li>
-{/* 
-            <Switch color="green" onClick={e => setNight(!isNight)} className="onoffswitch">
-              <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
-              <label className="onoffswitch-label" htmlFor="myonoffswitch">
-                <span className="onoffswitch-inner"></span>
-                <span className="onoffswitch-switch"></span>
-              </label>
-            </Switch> */}
-
-            {/* </>
-            )}
-            <li>
-              <MetaMaskButton />
-            </li> */}
-          </ul>
-        </nav-links>
+    <div className="nav-container">
+      <div className="nav-div">
+        <div>
+          <Link className="stakeBTN" style={{ color: "rgb(15, 224, 15)" }} to="/">HELLO</Link>
+        </div>
+        <div>
+          <a
+            className="stakeBTN"
+            style={{ color: "rgb(15, 224, 15)" }}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
+          >
+            TRADE
+          </a>
+        </div>
+        <div>
+          <Link style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" to="/stake">
+            VAULT
+          </Link>
+        </div>
+        <div>
+          <a style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" href="https://app.fur.finance">
+            FARMS
+          </a>
+        </div>
       </div>
-    </nav>
-  );
+      <div className="darkmode-container">
+        <Switch color="green" onCdivck={e => setNight(!isNight)} className="onoffswitch">
+          <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
+          <label className="onoffswitch-label" htmlFor="myonoffswitch">
+            <span className="onoffswitch-inner"></span>
+            <span className="onoffswitch-switch"></span>
+          </label>
+        </Switch>
+      </div>
+    </div>
+  )
 };
 
-export default DarkmodeNav;
+
