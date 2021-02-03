@@ -17,29 +17,44 @@ import catbowl from '../images/CAT BOWL.png'
 import text from '../images/TEXT.png'
 
 
-const Home = ({ Title, subTitle, isNight, maskAccount }) => {
+const Home = () => {
   return (
-    <div className="mainCard">
 
-      <Card className="card">
-
-        <h1 className="pubKey">fur.finance</h1>
-     
-        <img src={purr} width="140" height="60" />
-        <div></div>
-        <a href="https://app.fur.finance"><img className="catBowl" src={catbowl} width="400" height="200" /></a>
-        <div></div>
-        <div className="menuBtn">
-        <a href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`} style={{ color: 'lime' }}><Button depressed>💸 Trade</Button></a>
-          <Button><Link to={"/stake"} style={{ color: 'lime' }}>🥩 Stake</Link></Button>
-          <a href={`https://app.fur.finance`}style={{ color: 'lime' }}><Button>🧑‍🌾 Farm </Button></a>
+    <div className="home-container">
+      <Card className="home-card">
+        <div className="home-header">
+          <h1 className="pubKey">fur.finance</h1>
         </div>
-        <img className="headline"src={text} width="500" height="90" />
-        
-      
-
-        
+        <div className="purr-container">
+          <img className="purr-img" src={ purr } />
+        </div>
+        <div className="bowl-container">
+          <a href="https://app.fur.finance">
+            <img className="cat-bowl" src={catbowl} />
+          </a>
+        </div>
+        <div className="home-btns">
+          <a className="trade" href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`} >
+            <Button depressed className="trade">
+              💸 Trade
+            </Button>
+          </a>
+            <Button className="stake">
+              <Link className="stake" to={"/stake"} >
+                🥩 Stake
+              </Link>
+            </Button>
+          <a className="farm" href={`https://app.fur.finance`} >
+            <Button>
+              🧑‍🌾 Farm 
+            </Button>
+          </a>
+        </div>
       </Card>
+      <div className="bottom-text">
+        <img className="btm-txt"src={ text } />
+      </div>
+
     </div>
   )
 
