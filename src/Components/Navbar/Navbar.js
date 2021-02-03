@@ -19,7 +19,10 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 //
 
 
+
 export const DarkmodeNav = (props) => {
+=======
+
 
   const [darkMode, setDarkMode] = useDarkMode(true)
 
@@ -29,7 +32,9 @@ export const DarkmodeNav = (props) => {
     setDarkMode(!darkMode)
   }
 
+
   return (
+
     <div className="nav-container">
       <div className="dark-mode__toggle">
         <div
@@ -65,6 +70,7 @@ export const DarkmodeNav = (props) => {
       </div>
     </div>
   )
+
 };
 
-
+export default DarkmodeNav;
