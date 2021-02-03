@@ -14,9 +14,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 //pages import
 import Home from "./pages/Home";
-//Navbar
+
 import { DarkmodeNav } from "./Components/Navbar/Navbar";
 import useDarkMode from './Hooks/useDarkMode';
+
 
 //Footer
 import BottomBar from "./Components/Footer/BottomBar";
@@ -67,7 +68,9 @@ function App() {
   };
 
   return (
+
     <div className="container">
+    <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative', backgroundSize: '100%' }}>
        <Context.Provider
         value={{
           maskProvider,
@@ -79,10 +82,12 @@ function App() {
       />
 
       <Router>
+
         <div className="nav-bar">
           <DarkmodeNav />
         </div>
   
+
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
@@ -107,6 +112,8 @@ function App() {
         </Suspense>
         </div>
       </Router>
+
+
     </div>
   );
 }
