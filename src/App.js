@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 //pages import
 import Home from "./pages/Home";
 //Navbar
-import Navbar from "./Components/Navbar/Navbar";
+import { DarkmodeNav } from "./Components/Navbar/Navbar";
 
 //Footer
 import BottomBar from "./Components/Footer/BottomBar";
@@ -70,8 +70,8 @@ function App() {
 
   return (
 
-    <div className="container">
     <div className={isNight ? 'nt' : 'bg'} style={{ color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative', backgroundSize: '100%' }}>
+    <div className="container">
        <Context.Provider
         value={{
           maskProvider,
@@ -83,9 +83,9 @@ function App() {
       />
 
       <Router>
-        {/* <div className="nav-bar">
-          <Navbar isNight={isNight} setNight={setNight} maskAccount={maskAccount} />
-        </div>    */}
+        <div className="nav-bar">
+          <DarkmodeNav isNight={isNight} setNight={setNight} maskAccount={maskAccount} />
+  
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
@@ -109,7 +109,9 @@ function App() {
           </Switch>
         </Suspense>
         </div>
+        </div> 
       </Router>
+
     </div>
     </div>
   );
