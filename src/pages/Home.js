@@ -15,11 +15,11 @@ import eth from '../images/eth.gif'
 import purr from '../images/PURRR.png'
 import catbowl from '../images/CAT BOWL.png'
 import text from '../images/TEXT.png'
- 
- 
+
+
 const Home = () => {
   return (
- 
+    
     <div className="home-container">
       <Card className="home-card">
         <div className="home-header">
@@ -56,12 +56,12 @@ const Home = () => {
           Fur is the new money for decentralized cat treats
         </p>
       </div>
- 
+
     </div>
   )
- 
- 
- 
+
+
+
 };
- 
+
 export default Home;

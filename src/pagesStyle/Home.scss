@@ -52,6 +52,7 @@ body {
             font-size: 4.5rem;
             font-family: $font;
             font-weight: bold;
+            text-transform: lowercase;
         }
  
         .purr-container {
@@ -102,7 +103,7 @@ body {
                 font-family: $thirdFont;
                 font-size: 3rem;
                 width: 100%;
-                color: limegreen;
+                color: rgb(62, 153, 62);
             }
     }
 }

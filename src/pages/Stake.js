@@ -521,156 +521,296 @@ class Stake extends Component {
       userStakedTokenAmount,
       userTokenAmount,
     } = this.state;
+
     return (
-      <>
-        {/* <div data-aos="fade-up"> */}
-        <Card className="cardWrapper">
-          <h1 className="stakeHeader">{'Kitty Treats'.toUpperCase()}</h1>
-          <div></div>
-          <h2 className="stakeHeader">{'Vending Machine'.toUpperCase()}</h2>
+      <div className="stake-container">
 
-          <Card className="sectionWrapperTest">
+        {/* CARD ONE */}
 
-
-            <div dark className="stakeFur1" >
-              <div className="centerText">
-                <span className="stakeText">{'All Staked FUR'.toUpperCase()}</span>
-
-                <h1 className="stakeNumber">{this.displayValue(totalTokenStaked)}</h1>
-              </div>
-              <img src={FOOD} className="food" />
-            </div >
-
-
-
-
-
-
-
-            <div dark className="stakeFur2">
-              <div className="centerText2">
-                <span className="stakeText2">{'Your Staked Fur'.toUpperCase()}</span>
-                <h1 className="stakeNumber2">{this.displayValue(userStakedTokenAmount)}</h1>
-              </div>
-              <img src={FOOD2} className="food2" />
+        <Card className="main-card">
+            <div className="stake-header">
+              <h1 className="stake-h1"> { `Kitty Treats`.toUpperCase() } </h1>
+                <br />
+              <h2 className="stake-h2"> { `Vending Machine`.toUpperCase() } </h2>
             </div>
-
-
-
-
-            {/* starting the nxt row */}
-
-
-
-            <div className="stakeFur3">
-              <div className="centerText3">
-
-                <span className="stakeText3">{"FUR Balance:".toUpperCase()}</span>
-
-                <h1 className="stakeNumber3">{this.displayValue(userTokenAmount)}</h1>
-
-                <input
-                  type="number"
-                  className="input"
-                  id="amountToStake"
-                  placeholder="AMOUNT"
-                  value={amountToStake}
-                  onChange={this.handleChange}
-
-                />
-
-                <div className="stakingCard">
-                  <button
-                    className="farmBtn"
-                    // TODO do better type check here, right now userTokenAmount is a string
-                    disabled={userTokenAmount == 0}
-                    onClick={this.handleSetAllToStake}
-
-                  >
-
-                  </button>
-                  <button
-                    className="farmBtn7"
-                    disabled={amountToStake === 0 || amountToStake === ""}
-                    onClick={this.handleSteak}
-                  >
-
-                  </button>
+            <div className="all-cards-div">
+              <Card className="all-staked-card">
+                <div className="all-staked-text">
+                  <h3 className="all-staked-h3"> { `All Staked FUR`.toUpperCase() } </h3>
+                  <p className="stake-number"> { this.displayValue(totalTokenStaked) } </p>
                 </div>
+                <div className="all-staked-img">
+                  <img className="food-img-1" src={ FOOD } />
+                </div>
+              </Card>
 
-              </div>
-              <img src={FOOD3} className="food3" />
+              {/* CARD TWO */}
 
+              <Card className="your-staked-card">
+                <div className="your-staked-text">
+                  <h3 className="your-staked-h3"> { `Your Staked Fur`.toUpperCase() } </h3>
+                  <p className="stake-number"> { this.displayValue(userStakedTokenAmount) } </p>
+                </div>
+                <div className="your-staked-img">
+                  <img className="food-img-2" src={ FOOD2 } />
+                </div>
+              </Card>
+
+              {/* CARD THREE */}
+
+              <Card className="stake-card">
+                <div className="stake-card-text">
+                  <h3 className="stake-h3">
+                    Stake Your Fur
+                      <br />
+                      <br />
+                    { `FUR Balance:`.toUpperCase() }
+                  </h3>
+                  <p className="stake-number"> { this.displayValue(userTokenAmount) } </p>
+                  <div className="stake-functionality">
+                    <div className="field">
+                      <input
+                        type="number"
+                        className="input"
+                        id="amountToStake"
+                        placeholder="AMOUNT"
+                        value={amountToStake}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                      <div className="stake-buttons">
+                        <button
+                          className="farmBtn1"
+                          // TODO do better type check here, right now userTokenAmount is a string
+                          disabled={userTokenAmount == 0}
+                          onClick={this.handleSetAllToStake}
+                        >
+                          ALL
+                        </button>
+                        <button
+                          className="farmBtn2"
+                          disabled={amountToStake === 0 || amountToStake === ""}
+                          onClick={this.handleSteak}
+                        >
+                          STAKE
+                        </button>
+                      </div>
+                  </div>
+                </div>
+                <div className="staked-img">
+                  <img className="food-img-3" src={ FOOD3 } />
+                </div>
+              </Card>
+
+              {/* CARD FOUR */}
+
+              <Card className="fur-profit-card">
+                <div className="fur-profit-text">
+                  <h3 className="profit-h3">
+                    Your Fur profit
+                      <br />
+                      <br />
+                    Profit Earned:
+                  </h3>
+                  <p className="stake-number"> { this.displayValue(userTokenAmount) } </p>
+                  <div className="profit-functionality">
+                    <div className="field">
+                      <input
+                        type="number"
+                        className="input"
+                        id="amountToUnstake"
+                        placeholder="FUR TO WITHDRAW"
+                        value={amountToUnstake}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    <div className="profit-buttons">
+                      <button 
+                        // TODO do better type check here, right now userStakedTokenAmount is a string
+                        disabled={userStakedTokenAmount == 0}
+                        onClick={this.handleSetAllToWithdraw}
+                        className="farmBtn3"
+                      >
+                        ALL
+                      </button>
+                      <button  
+                        // TODO do better type check here, right now userDividends is a string
+                        disabled={userDividends == 0}
+                        onClick={this.handleCollect}
+                        className="farmBtn4"
+                      >
+                        COLLECT
+                      </button>
+                      <button
+                        disabled={amountToUnstake === 0 || amountToUnstake === ""}
+                        onClick={this.handleUnstake}
+                        className="farmBtn5"
+                      >
+                        WITHDRAW
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="staked-img">
+                  <img className="food-img-4" src={ FOOD4 } />
+                </div>
+              </Card>
             </div>
-
-
-
-
-
-            <div className="stakeFur4">
-              <div className="centerText4">
-              <div className="stakeText4">
-                <h3 className="furProfit">YOUR FUR PROFIT</h3>
-                <div></div>
-                <div></div>
-                <span className="stakeText3">
-                  PROFIT EARNED <h3 className="stakeNumber4">{this.displayValue(userDividends)}</h3>
-                </span>
-                <div className="field">
-                  <input
-                    type="number"
-                    className="input"
-                    id="amountToUnstake"
-                    placeholder="WITHDRAW"
-                    value={amountToUnstake}
-                    onChange={this.handleChange}
-                  />
-                </div>
-              </div>
-              <div className="stakingCard">
-                <div className="centerBtns">
-                  <button // TODO do better type check here, right now userStakedTokenAmount is a string
-                    disabled={userStakedTokenAmount == 0}
-                    onClick={this.handleSetAllToWithdraw}
-                    className="farmBtn1"
-                  >
-
-                  </button>
-
-                  <button // TODO do better type check here, right now userDividends is a string
-                    disabled={userDividends == 0}
-                    onClick={this.handleCollect}
-                    className="farmBtn2"
-                  >
-
-                  </button>
-
-
-
-
-                  <button style={{ marginBottom: '12px' }}
-                    disabled={amountToUnstake === 0 || amountToUnstake === ""}
-                    onClick={this.handleUnstake}
-                    className="farmBtn3"
-                  >
-
-                  </button>
-                </div>
-
-              </div>
-              </div>
-              <img src={FOOD4} className="food4" />
-            </div>
-          </Card>
         </Card>
+      </div>
+    )
+
+
+    // return (
+    //   <>
+    //     {/* <div data-aos="fade-up"> */}
+    //     <Card className="cardWrapper">
+    //       <h1 className="stakeHeader">{'Kitty Treats'.toUpperCase()}</h1>
+    //       <div></div>
+    //       <h2 className="stakeHeader">{'Vending Machine'.toUpperCase()}</h2>
+
+    //       <Card className="sectionWrapperTest">
+
+
+    //         <div dark className="stakeFur1" >
+    //           <div className="centerText">
+    //             <span className="stakeText">{'All Staked FUR'.toUpperCase()}</span>
+
+    //             <h1 className="stakeNumber">{this.displayValue(totalTokenStaked)}</h1>
+    //           </div>
+    //           <img src={FOOD} className="food" />
+    //         </div >
 
 
 
 
 
-        {/* </div> */}
-      </>
-    );
+
+
+    //         <div dark className="stakeFur2">
+    //           <div className="centerText2">
+    //             <span className="stakeText2">{'Your Staked Fur'.toUpperCase()}</span>
+    //             <h1 className="stakeNumber2">{this.displayValue(userStakedTokenAmount)}</h1>
+    //           </div>
+    //           <img src={FOOD2} className="food2" />
+    //         </div>
+
+
+
+
+    //         {/* starting the nxt row */}
+
+
+
+    //         <div className="stakeFur3">
+    //           <div className="centerText3">
+
+    //             <span className="stakeText3">{"FUR Balance:".toUpperCase()}</span>
+
+    //             <h1 className="stakeNumber3">{this.displayValue(userTokenAmount)}</h1>
+
+    //             <input
+    //             type="number"
+    //               className="input"
+    //               id="amountToStake"
+    //               placeholder="AMOUNT"
+    //               value={amountToStake}
+    //               onChange={this.handleChange}
+
+    //             />
+
+    //             <div className="stakingCard">
+    //               <button
+    //                 className="farmBtn"
+    //                 // TODO do better type check here, right now userTokenAmount is a string
+    //                 disabled={userTokenAmount == 0}
+    //                 onClick={this.handleSetAllToStake}
+
+    //               >
+
+    //               </button>
+    //               <button
+    //                 className="farmBtn7"
+    //                 disabled={amountToStake === 0 || amountToStake === ""}
+    //                 onClick={this.handleSteak}
+    //               >
+
+    //               </button>
+    //             </div>
+
+    //           </div>
+    //           <img src={FOOD3} className="food3" />
+
+    //         </div>
+
+
+
+
+
+    //         <div className="stakeFur4">
+    //           <div className="centerText4">
+    //           <div className="stakeText4">
+    //             <h3 className="furProfit">YOUR FUR PROFIT</h3>
+    //             <div></div>
+    //             <div></div>
+    //             <span className="stakeText3">
+    //               PROFIT EARNED <h3 className="stakeNumber4">{this.displayValue(userDividends)}</h3>
+    //             </span>
+    //             <div className="field">
+    //               <input
+    //                 type="number"
+    //                 className="input"
+    //                 id="amountToUnstake"
+    //                 placeholder="WITHDRAW"
+    //                 value={amountToUnstake}
+    //                 onChange={this.handleChange}
+    //               />
+    //             </div>
+    //           </div>
+    //           <div className="stakingCard">
+    //             <div className="centerBtns">
+    //               <button // TODO do better type check here, right now userStakedTokenAmount is a string
+    //                 disabled={userStakedTokenAmount == 0}
+    //                 onClick={this.handleSetAllToWithdraw}
+    //                 className="farmBtn1"
+    //               >
+
+    //               </button>
+
+    //               <button // TODO do better type check here, right now userDividends is a string
+    //                 disabled={userDividends == 0}
+    //                 onClick={this.handleCollect}
+    //                 className="farmBtn2"
+    //               >
+
+    //               </button>
+
+
+
+
+    //               <button style={{ marginBottom: '12px' }}
+    //                 disabled={amountToUnstake === 0 || amountToUnstake === ""}
+    //                 onClick={this.handleUnstake}
+    //                 className="farmBtn3"
+    //               >
+
+    //               </button>
+    //             </div>
+
+    //           </div>
+    //           </div>
+    //           <img src={FOOD4} className="food4" />
+    //         </div>
+    //       </Card>
+    //     </Card>
+
+
+
+
+
+    //     {/* </div> */}
+    //   </>
+    // );
   }
 }
 

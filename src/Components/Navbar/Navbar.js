@@ -39,12 +39,12 @@ export const DarkmodeNav = (props) => {
       </div>
       <div className="nav-div">
         <div>
-          <Link className="stakeBTN" style={{ color: "rgb(15, 224, 15)" }} to="/">HELLO</Link>
+          <Link className="stakeBTN" style={{ color: "rgb(62, 153, 62);" }} to="/">HELLO</Link>
         </div>
         <div>
           <a
             className="stakeBTN"
-            style={{ color: "rgb(15, 224, 15)" }}
+            style={{ color: "rgb(62, 153, 62);" }}
             target="_blank"
             rel="noopener noreferrer"
             href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
@@ -53,12 +53,12 @@ export const DarkmodeNav = (props) => {
           </a>
         </div>
         <div>
-          <Link style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" to="/stake">
+          <Link style={{ color: "rgb(62, 153, 62);" }} className="stakeBTN" to="/stake">
             VAULT
           </Link>
         </div>
         <div>
-          <a style={{ color: "rgb(15, 224, 15)" }} className="stakeBTN" href="https://app.fur.finance">
+          <a style={{ color: "rgb(62, 153, 62);" }} className="stakeBTN" href="https://app.fur.finance">
             FARMS
           </a>
         </div>

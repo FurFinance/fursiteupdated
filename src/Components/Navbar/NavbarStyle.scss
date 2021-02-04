@@ -1,5 +1,4 @@
 //font import
-//font import
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -11,7 +10,7 @@ $grey: #26d0eb;
 $font: 'VT323', sans-serif;
  
 .nav-container {
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
     margin-top: 2%;
     margin-bottom: 5%;
@@ -25,10 +24,14 @@ $font: 'VT323', sans-serif;
       border-radius: 15px;
       overflow: hidden;
       box-shadow:
-        -8px -4px 8px 0px #ffffff,
-        8px 4px 12px 0px #d1d9e6,
-        4px 4px 4px 0px #d1d9e6 inset,
-        -4px -4px 4px 0px #ffffff inset;
+        -4px -4px 4px 0px #ffffff,
+        4px 2px 12px 0px #d1d9e6,
+        2px 2px 2px 0px #d1d9e6 inset,
+        -2px -2px 2px 0px #ffffff inset;
+    }
+ 
+    .dark-mode__toggle:hover {
+      cursor: pointer;
     }
  
     .toggle {
@@ -54,7 +57,6 @@ $font: 'VT323', sans-serif;
     }
 }
  
- 
     .nav-div {
         display: flex;
         justify-content: space-between;
@@ -63,8 +65,9 @@ $font: 'VT323', sans-serif;
  
         .stakeBTN {
             font-family: $font;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-style: italic;
+            color: rgb(62, 153, 62);;
         }
     }
  
@@ -100,13 +103,13 @@ $font: 'VT323', sans-serif;
  
   @media screen and (max-width: 1440px) {
     .nav-container {
-        width: 50%;
+        width: 30%;
  
       .nav-div {
         margin-top: 7%;
  
         .stakeBTN {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
         }
       }
     }
