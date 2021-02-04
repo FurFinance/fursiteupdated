@@ -5,11 +5,11 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import 'ui-neumorphism/dist/index.css'
 import Context from "./Context/ReactContext"; 
 import ReactTypingEffect from 'react-typing-effect';
-
+ 
 import DOS from 'figlet/importable-fonts/DOS Rebel'
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+ 
 import AOS from "aos";
 import "aos/dist/aos.css";
 //pages import
@@ -17,28 +17,28 @@ import Home from "./pages/Home";
 //Navbar
 import { DarkmodeNav } from "./Components/Navbar/Navbar";
 import useDarkMode from './Hooks/useDarkMode';
-
+ 
 //Footer
 import BottomBar from "./Components/Footer/BottomBar";
 import { Suspense } from "react";
-
+ 
 const About = React.lazy(() => import("./pages/About"));
 /* const Blog = React.lazy(() => import("./pages/Blog")); */
 const Team = React.lazy(() => import("./pages/Team"));
 const Stake = React.lazy(() => import("./pages/Stake"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
 const Chart = React.lazy(() => import("./pages/Chart"));
-
+ 
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(false);
   const [maskProvider, setMaskProvider] = useState();
   const [maskAccount, setMaskAccount] = useState();
-
+ 
   useEffect(() => {
     AOS.init({
       duration: 2000,
     });
-
+ 
     const MetaMask = async () => {
       const MaskProvider = await detectEthereumProvider();
       if (MaskProvider) {
@@ -49,7 +49,7 @@ function App() {
     };
     MetaMask();
   }, []);
-
+ 
   const connectMetaMask = async () => {
     let pubKey;
     if (maskProvider) {
@@ -65,7 +65,7 @@ function App() {
       );
     }
   };
-
+ 
   return (
     <div className="container">
        <Context.Provider
@@ -77,12 +77,12 @@ function App() {
           connectMetaMask,
         }}
       />
-
+ 
       <Router>
         <div className="nav-bar">
           <DarkmodeNav />
         </div>
-  
+ 
         <div className="home-import">
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
@@ -92,7 +92,7 @@ function App() {
                 <Home style={{color: "lime"}}
                   Title="fur.finance"
                   maskAccount={maskAccount}
-                  
+ 
                 />
               )}
               exact
@@ -110,5 +110,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
