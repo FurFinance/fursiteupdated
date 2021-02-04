@@ -19,7 +19,7 @@ import text from '../images/TEXT.png'
 
 const Home = () => {
   return (
-
+    
     <div className="home-container">
       <Card className="home-card">
         <div className="home-header">
