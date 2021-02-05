@@ -1,684 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+import React, { Component, lazy, useEffect, useState } from "react";
+import { Card } from 'ui-neumorphism';
+import './index.css'
+import detectEthereumProvider from "@metamask/detect-provider";
+import 'ui-neumorphism/dist/index.css'
+import Context from "./Context/ReactContext"; 
+import ReactTypingEffect from 'react-typing-effect';
 
-//variables
+import DOS from 'figlet/importable-fonts/DOS Rebel'
+//react router dom
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+//pages import
+import Home from "./pages/Home";
+//Navbar
+import { Navbar } from "./Components/Navbar/Navbar";
+import useDarkMode from './Hooks/useDarkMode';
 
-$font: 'Poppins',
-sans-serif !important;
-$secondFont: 'Noto Sans',
-sans-serif !important;
-$thirdFont: 'VT323',
-sans-serif !important;
+//Footer
+import BottomBar from "./Components/Footer/BottomBar";
+import { Suspense } from "react";
 
+const About = React.lazy(() => import("./pages/About"));
+/* const Blog = React.lazy(() => import("./pages/Blog")); */
+const Team = React.lazy(() => import("./pages/Team"));
+const Stake = React.lazy(() => import("./pages/Stake"));
+const Error404 = React.lazy(() => import("./pages/Error404"));
+const Chart = React.lazy(() => import("./pages/Chart"));
 
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #e4ebf5; 
-    background-size: cover;
-}
+function App() {
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  const [maskProvider, setMaskProvider] = useState();
+  const [maskAccount, setMaskAccount] = useState();
 
-// hello
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
 
-.home-container {
-    min-height: 100vh;
-    height: 0 auto;
-    width: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    const MetaMask = async () => {
+      const MaskProvider = await detectEthereumProvider();
+      if (MaskProvider) {
+        await MaskProvider.enable();
+        setMaskProvider(MaskProvider);
+        setMaskAccount(MaskProvider.selectedAddress);
+      }
+    };
+    MetaMask();
+  }, []);
 
-    .home-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        width: 40%;
-        height: 50%;
-        padding-top: 1%;
-        padding-bottom: 3%;
-        background-color: transparent;
-
-        .pubKey {
-            animation: color-change 5s infinite;
-            font-size: 4.5rem;
-            font-family: $font;
-            font-weight: bold;
-            text-transform: lowercase;
-        }
-
-        .purr-container {
-            text-align: center;
-
-            .purr-img {
-                width: 30%;
-            }
-        }
-
-        .bowl-container {
-            text-align: center;
-
-            .cat-bowl {
-                width: 70%;
-            }
-        }
-
-        .home-btns {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            margin-top: 5%;
-
-            .trade a {
-                color: #B832FB;
-            }
-
-            .stake a {
-                color: #32FB63;
-            }
-
-            .farm a {
-                color: #32ECFB;
-            }
-        }
-
+  const connectMetaMask = async () => {
+    let pubKey;
+    if (maskProvider) {
+      const accounts = await maskProvider.request({
+        method: "eth_requestAccounts",
+      });
+      const account = accounts[0];
+      setMaskAccount(account);
+      pubKey = <div>{}</div>
+    } else {
+      alert(
+        "Failed to connect to MetaMask. Do you have it installed? https://metamask.io"
+      );
     }
-
-        .bottom-text {
-            width: 100%;
-            text-align: center;
-            margin-top: 1%;
-
-            .btm-txt {
-                text-align: center;
-                text-transform: uppercase;
-                font-family: $thirdFont;
-                font-size: 2.3rem;
-                letter-spacing: 7px;
-                width: 100%;
-                color: #3ed724;
-            }
-    }
-}
-
-
-@media screen and (max-width: 2560px) {
-    .home-container {
-        margin-top: -3%;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    .home-container {
-        margin-top: -1%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .home-container {
-        margin-top: -10%;
-        
-        .home-card {
-            width: 80%;
-
-            .pubKey {
-                font-size: 8rem;
-            }
-
-            .purr-container {
-
-                .purr-img {
-                    width: 40%;
-                }
-            }
-
-            .bowl-container {
-
-                .cat-bowl {
-                    width: 90%;
-                }
-            }
-        }
-
-        .bottom-text {
-            width: 80%;
-
-            .btm-txt {
-                font-size: 4rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .home-container {
-        margin-top: -10%;
-        
-        .home-card {
-            width: 80%;
-        }
-
-        .bottom-text {
-            width: 80%;
-        }
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .home-container {
-        margin-top: 1%;
-        
-        .home-card {
-            width: 90%;
-
-            .pubKey {
-                font-size: 4rem;
-            }
-
-            .purr-container {
-                .purr-img {
-                    width: 25%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 70%;
-                }
-            }
-
-        }
-
-        .bottom-text {
-            width: 80%;
-
-            .btm-txt {
-                font-size: 2.5rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .home-container {
-        margin-top: 1%;
-        
-        .home-card {
-            width: 90%;
-
-            .pubKey {
-                font-size: 4rem;
-            }
-
-            .purr-container {
-                .purr-img {
-                    width: 25%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 70%;
-                }
-            }
-
-        }
-
-        .bottom-text {
-            width: 80%;
-
-            .btm-txt {
-                font-size: 2.5rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .home-container {
-        margin-top: -5%;
-        
-        .home-card {
-            width: 90%;
-
-            .pubKey {
-                font-size: 4rem;
-            }
-
-        }
-
-        .bottom-text {
-            width: 80%;
-
-            .btm-txt {
-                font-size: 2.5rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 414px) {
-    .home-container {
-        margin-top: -34%;
-
-        .home-card {
-            width: 80%;
-
-            .pubKey {
-                font-size: 3.2rem;
-            }
-
-            .purr-container {
-                text-align: center;
-    
-                .purr-img {
-                    width: 40%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 80%;
-                }
-            }
-        }
-        .bottom-text {
-            width: 80%;
-            margin-top: 2%;
-    
-            .btm-txt {
-                width: 100%;
-                font-size: 2rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 411px) {
-    .home-container {
-        margin-top: -30%;
-
-        .home-card {
-            width: 80%;
-
-            .pubKey {
-                font-size: 3.2rem;
-            }
-
-            .purr-container {
-                text-align: center;
-    
-                .purr-img {
-                    width: 40%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 80%;
-                }
-            }
-        }
-        .bottom-text {
-            width: 80%;
-            margin-top: 2%;
-    
-            .btm-txt {
-                width: 100%;
-                font-size: 2rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .home-container {
-        margin-top: -40%;
-
-        .home-card {
-            width: 80%;
-
-            .pubKey {
-                font-size: 2.5rem;
-            }
-
-            .purr-container {
-                text-align: center;
-    
-                .purr-img {
-                    width: 40%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 80%;
-                }
-            }
-
-            .home-btns {
-                flex-direction: column;
-                text-align: center;
-                justify-content: space-between;
-                height: 9rem;
-                width: 5.6rem;
-
-                .stake {
-                    width: 2rem;
-                }
-            }
-        }
-        .bottom-text {
-            width: 80%;
-            margin-top: 2%;
-    
-            .btm-txt {
-                width: 100%;
-                font-size: 1.7rem;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 360px) {
-    .home-container {
-        margin-top: -15%;
-
-        .home-card {
-            width: 80%;
-
-            .pubKey {
-                font-size: 2.5rem;
-            }
-
-            .purr-container {
-                text-align: center;
-    
-                .purr-img {
-                    width: 40%;
-                }
-            }
-
-            .bowl-container {
-                .cat-bowl {
-                    width: 80%;
-                }
-            }
-
-            .home-btns {
-                flex-direction: column;
-                text-align: center;
-                justify-content: space-between;
-                height: 9rem;
-                width: 5.6rem;
-
-                .stake {
-                    width: 2rem;
-                }
-            }
-        }
-        .bottom-text {
-            width: 80%;
-            margin-top: 2%;
-    
-            .btm-txt {
-                width: 100%;
-                font-size: 1.7rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 320px) {
-
-    .home-container {
-        margin-top: -9%;
-
-
-        .bottom-text {
-            width: 80%;
-            margin-top: 3%;
-
-            .btm-txt {
-                width: 100%;
-                font-size:1rem;
-            }
-        }
-    }
-  }
-
-
-
-
-
-
-// [data-aos^=fade][data-aos^=fade] {
-//     opacity: 1 !important;
-// }
-
-// .main {
-//     width: 0 auto;
-//     height: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-
-//     .homeCard {
-//         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-//         font-weight: bold;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         width: 0 auto;
-//         height: 0 auto;
-//         margin: 0 auto;
-
-
-//         .menuBtn {
-//             display: flex;
-//             width: 100%;
-//         }
-//     }
-
-//     .header {
-//         margin: 0 auto;
-//         display: flex;
-//     }
-// }
-
-// a {
-//     color: rgb(15, 224, 15);
-//     -webkit-text-stroke-color: black;
-// }
-
-
-
-@keyframes color-change {
-  14% { color: rgb(37, 150, 150); }
-  28% { color: rgb(224, 18, 196); }
-  42% { color: rgb(190, 0, 0); }
-  56% { color: rgb(0, 255, 0); }
-  70% { color: rgb(0, 0, 255); }
-  84% { color: indigo; }
-  100% { color: rgba(161, 35, 161, 0.521); }
+  };
+
+  return (
+    <div className="container">
+       <Context.Provider
+        value={{
+          maskProvider,
+          setMaskProvider,
+          maskAccount,
+          setMaskAccount,
+          connectMetaMask,
+        }}
+      />
+
+      <Router>
+        <div className="nav-bar">
+          <Navbar />
+        </div>
   
+        <div className="home-import">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route
+              path="/"
+              component={() => (
+                <Home style={{color: "lime"}}
+                  Title="fur.finance"
+                  maskAccount={maskAccount}
+                  
+                />
+              )}
+              exact
+            />
+            <Route path="/about" component={About} exact />
+            {/* <Route path="/blog" component={Blog} exact /> */}
+            <Route path="/team" component={Team} exact />
+            <Route path="/stake" component={Stake} exact />
+            <Route path="/chart" component={Chart} />
+            <Route component={Error404} />
+          </Switch>
+        </Suspense>
+        </div>
+      </Router>
+    </div>
+  );
 }
 
-.lastphoto {
-    margin-top: 10px;
-}
-
-.title h1 {
-   
-    font-size: 4.8rem;
-    letter-spacing: 0rem;
-}
-
-
-
-.title p {
-    font-size: 1.5rem;
-    font-family: $thirdFont;
-    letter-spacing: 0.1rem;
-    color:rgb(15, 224, 15);
-}
-
-.subtitle {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    width: 40%;
-    margin-top: 30px;
-    display: block;
-    justify-content: center;
-    box-shadow: none;
-    background-color: transparent
-}
-.cyberPunk {
-   
-    object-fit: cover;
-    width:230px;
-    height:230px;
-  
-}
-
-
-// .menuBtn {
-//     display: flex;
-//     margin-bottom: -5%;
-//     justify-content: space-around;
-//     margin: 5px;
-//     margin-top: 2.5rem;
-// }
-
-// .homeCard {
-//     margin: 0 auto;
-//     margin-left: 32.5%;
-//     width: 35%;
-//     height: 35%;
-//     margin-top: 3rem;
-//     padding: 1rem;
-// }
-
-// .pubKey {
-//     animation: color-change 5s infinite;
-//     margin: 0 auto;
-//     font-size: 4.5rem;
-//     text-align: center;
-// }
-
-// .catBowl:hover {
-//     transform: scale(1.1);
-//     transition: .5s;
-// }
-
-// @keyframes color-change {
-//     14% {
-//         color: rgb(37, 150, 150);
-//     }
-
-//     28% {
-//         color: rgb(224, 18, 196);
-//     }
-
-//     42% {
-//         color: rgb(190, 0, 0);
-//     }
-
-//     56% {
-//         color: rgba(0, 255, 0, 0.39);
-//     }
-
-//     70% {
-//         color: rgba(0, 0, 255, 0.589);
-//     }
-
-//     84% {
-//         color: indigo;
-//     }
-
-//     100% {
-//         color: rgba(238, 130, 238, 0.521);
-//     }
-
-// }
-
-
-// Responsive
-
-
-// @media screen and (max-width: 375px) {
-//     .home-card {
-//         border: 1px solid red;
-//         width: auto;
-//     }
-// }
-
-
-// @media only screen 
-//   and (min-device-width: 375px) {
-
-
-//     body {
-//         min-height: 100%;
-//         min-width: 100%;
-//     }
-
-// }
-
-// @media screen and (max-width: 319px) {
-//   .nav-bar {
-//       margin-left: 23%;
-//   }
-// }
-
-
-// @media only screen 
-//   and (min-device-width: 768px) {
-
-//   .mainCard .card {
-//       height: 38rem;
-//       width: 100%;
-//       padding-top: 3%;
-//       margin: 25% auto;
-//     }
-//   }
-
-
-//responsive for title + subtitle
-
-// @media screen and (max-width: 900px) {
-//     .mainCard .card {
-//         margin-top: 9%;
-//     }
-// }
-
-// @media screen and (max-width: 500px) {
-//     .mainCard .card {
-//         margin-top: 15%;
-//         padding-top: 4%;
-//     }
-// }
-
-// @media screen and (max-width: 425px) {
-//     .mainCard .card {
-//         margin-top: 30%;
-//     }
-// }
-
-// @media screen and (max-width: 375px) {
-//     .main {
-//         border: 1px solid red;
-//         width: 100%;
-//     }
-// }
-
+export default App;
