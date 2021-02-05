@@ -53,7 +53,9 @@ const Home = () => {
       </Card>
       <div className="bottom-text">
         <p className="btm-txt">
-          Fur is the new money for decentralized cat treats
+          Fur is the new money for
+          <br /> 
+          decentralized cat treats
         </p>
       </div>
 

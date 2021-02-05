@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 //pages import
 import Home from "./pages/Home";
 //Navbar
-import { DarkmodeNav } from "./Components/Navbar/Navbar";
+import { Navbar } from "./Components/Navbar/Navbar";
 import useDarkMode from './Hooks/useDarkMode';
 
 //Footer
@@ -80,7 +80,7 @@ function App() {
 
       <Router>
         <div className="nav-bar">
-          <DarkmodeNav />
+          <Navbar />
         </div>
   
         <div className="home-import">
