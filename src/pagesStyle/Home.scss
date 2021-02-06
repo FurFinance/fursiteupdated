@@ -38,11 +38,12 @@ body {
     justify-content: center;
  
     .home-card {
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        margin-top: -10%;
+        margin-top: -5%;
         width: 30%;
         // height: 50%;
         padding-top: 1%;
@@ -51,7 +52,7 @@ body {
  
         .pubKey {
             animation: color-change 5s infinite;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-family: $font;
             font-weight: bold;
             text-transform: lowercase;
@@ -100,6 +101,7 @@ body {
             margin-top: 1%;
  
             .btm-txt {
+                font-weight: bold;
                 text-align: center;
                 text-transform: uppercase;
                 font-family: $thirdFont;
