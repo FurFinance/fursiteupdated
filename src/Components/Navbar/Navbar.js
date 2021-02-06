@@ -78,7 +78,7 @@ export const Navbar = (props) => {
           </li>
           <li>
             <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/groupbuy">
-            GROUP BY
+            GROUP BUY
             </Link>
           </li>
  
