@@ -42,16 +42,16 @@ body {
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        margin-top: 5%;
-        width: 40%;
-        height: 50%;
+        margin-top: -10%;
+        width: 30%;
+        // height: 50%;
         padding-top: 1%;
         padding-bottom: 3%;
         background-color: transparent;
  
         .pubKey {
             animation: color-change 5s infinite;
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-family: $font;
             font-weight: bold;
             text-transform: lowercase;
@@ -103,7 +103,7 @@ body {
                 text-align: center;
                 text-transform: uppercase;
                 font-family: $thirdFont;
-                font-size: 2.3rem;
+                font-size: 1.9rem;
                 letter-spacing: 7px;
                 width: 100%;
                 color: #3ed724;
@@ -162,10 +162,14 @@ body {
  
 @media screen and (max-width: 768px) {
     .home-container {
-        margin-top: -10%;
+        margin-top: 5%;
  
         .home-card {
             width: 80%;
+
+            .pubKey {
+                font-size: 6rem;
+            }
         }
  
         .bottom-text {
@@ -269,7 +273,7 @@ body {
  
 @media screen and (max-width: 414px) {
     .home-container {
-        margin-top: -34%;
+        margin-top: -25%;
  
         .home-card {
             width: 80%;
@@ -306,7 +310,7 @@ body {
  
 @media screen and (max-width: 411px) {
     .home-container {
-        margin-top: -30%;
+        margin-top: -20%;
  
         .home-card {
             width: 80%;
@@ -343,7 +347,7 @@ body {
  
 @media screen and (max-width: 375px) {
     .home-container {
-        margin-top: -40%;
+        margin-top: -25%;
  
         .home-card {
             width: 80%;
@@ -393,7 +397,7 @@ body {
  
 @media screen and (max-width: 360px) {
     .home-container {
-        margin-top: -15%;
+        margin-top: -10%;
  
         .home-card {
             width: 80%;
@@ -452,7 +456,7 @@ body {
  
             .btm-txt {
                 width: 100%;
-                font-size:1rem;
+                font-size:1.5rem;
             }
         }
     }
