@@ -619,7 +619,7 @@ class Stake extends Component {
                         type="number"
                         className="input"
                         id="amountToUnstake"
-                        placeholder="FUR TO WITHDRAW"
+                        placeholder="WITHDRAW"
                         value={amountToUnstake}
                         onChange={this.handleChange}
                       />

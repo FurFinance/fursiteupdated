@@ -1,0 +1,35 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e4ebf5; 
+    background-size: cover;
+    text-transform: uppercase;
+  }
+
+
+  .group-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3%;
+
+      .group-mainCard {
+          display: flex;
+          flex-direction: column;
+        //   justify-content: center;
+          align-items: center;
+          width: 40%;
+          height: 30rem;
+          background: transparent;
+
+          .group-img {
+            width: 100%;
+            height: 30rem;
+          }
+      }
+  }
