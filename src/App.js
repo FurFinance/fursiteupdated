@@ -28,6 +28,7 @@ const Team = React.lazy(() => import("./pages/Team"));
 const Stake = React.lazy(() => import("./pages/Stake"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
 const Chart = React.lazy(() => import("./pages/Chart"));
+const Group = React.lazy(() => import("./pages/GroupBuy"));
  
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(false);
@@ -102,11 +103,15 @@ function App() {
             <Route path="/team" component={Team} exact />
             <Route path="/stake" component={Stake} exact />
             <Route path="/chart" component={Chart} />
+            <Route path="/groupbuy" component={Group} exact />
             <Route component={Error404} />
           </Switch>
         </Suspense>
         </div>
       </Router>
+      <div className="footer">
+        <BottomBar />
+      </div>
     </div>
   );
 }

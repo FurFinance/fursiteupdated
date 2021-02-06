@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+ 
 //variables
 $white: #fff;
 $blue: #fc6c6b;
 $grey: #26d0eb;
 $font: 'VT323', sans-serif;
-
+ 
 //default reset
 * {
     margin: 0;
     padding: 0;
 }
-
+ 
 //styling
 nav {
     color: green;
@@ -23,20 +23,20 @@ nav {
     // border: 2px solid red;
     display: flex;
     justify-content: center;
-    
+ 
     //stick the navbar to the top
-   
+ 
     top: 0;
-
+ 
     //shadow
-
+ 
     .contain {
         width: 90%;
         margin: 0 auto;
         display: flex;
     }
 }
-
+ 
 .dark-mode__toggle {
   margin: 0 auto;
   margin-top: 10%;
@@ -52,11 +52,11 @@ nav {
     2px 2px 2px 0px #d1d9e6 inset,
     -2px -2px 2px 0px #ffffff inset;
 }
-
+ 
 .dark-mode__toggle:hover {
   cursor: pointer;
 }
-
+ 
 .toggle {
   height: 100%;
   width: 200%;
@@ -68,41 +68,41 @@ nav {
     -8px -4px 8px 0px #ffffff,
     8px 4px 12px 0px #d1d9e6;
 }
-
+ 
 .toggled {
   transform: translate3d(25%, 0, 0);
 }
-
+ 
 .dark-mode {
   color: rgb(255, 254, 254);
   background-color: #161b22;
-
+ 
 }
-
+ 
 .catToken {
     height: 28;
     margin-top: 1.3rem;
 }
-
+ 
 nav img {
     height: 63px;
     width: 118px;
     // padding-right: 730px; // change this to change the logo position
 }
-
+ 
 nav-links ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
 }
-
+ 
 nav-links ul li {
     text-decoration: none;
     font-size: 3rem;
     margin: 10px;
-    
+ 
 }
-
+ 
 nav-links ul li a {
     // border: 2px solid red;
     text-decoration: none;
@@ -111,39 +111,39 @@ nav-links ul li a {
     font-size: 1.7rem;
     transition: 0.2s;
 }
-
+ 
 //style of trade btn
-
-
+ 
+ 
 //style of stake btn
-
-
+ 
+ 
 //hover efects
 nav-links ul li a:hover {
-    
+ 
     padding-bottom: 1px;
 }
-
+ 
 .tradeBTN:hover {
     border-bottom: none;
     padding-bottom: 5px;
-    
+ 
 }
-
+ 
 .stakeBTN:hover {
     border-bottom: none;
     padding-bottom: 5px;
-    
+ 
 }
-
+ 
 .switch {
     margin-top: 500px;
 }
-
+ 
 //responsive
-
+ 
 @media screen and (max-width: 800px) {
-
+ 
     Switch {
         flex-direction: column;
         align-items: center;
@@ -166,16 +166,16 @@ nav-links ul li a:hover {
         padding-right: 0px;
     }
 }
-
+ 
 //working on 450px and smaller
-
+ 
 @media screen and (max-width: 450px) {
     nav-links ul {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
+ 
     nav-links ul li {
         padding: 5px 0px 5px 0px;
     }
