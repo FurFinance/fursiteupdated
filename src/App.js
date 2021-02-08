@@ -109,7 +109,7 @@ function App() {
         </Suspense>
         </div>
       </Router>
-      <div className="footer">
+      <div className="app-footer">
         <BottomBar />
       </div>
     </div>

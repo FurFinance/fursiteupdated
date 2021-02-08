@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: -5%;
  
     .home-card {
         
@@ -129,6 +130,7 @@ body {
 @media screen and (max-width: 1024px) {
     .home-container {
         margin-top: -10%;
+        margin-bottom: -10%;
  
         .home-card {
             width: 80%;
@@ -276,6 +278,7 @@ body {
 @media screen and (max-width: 414px) {
     .home-container {
         margin-top: -25%;
+        margin-bottom: -25%;
  
         .home-card {
             width: 80%;
@@ -313,6 +316,7 @@ body {
 @media screen and (max-width: 411px) {
     .home-container {
         margin-top: -20%;
+        margin-bottom: -20%;
  
         .home-card {
             width: 80%;
@@ -347,9 +351,62 @@ body {
     }
 }
  
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px)
+              and (max-height: 568px) {
+    .home-container {
+        margin-top: -10%;
+        margin-bottom: -10%;
+ 
+        .home-card {
+            width: 80%;
+ 
+            .pubKey {
+                font-size: 2.5rem;
+            }
+ 
+            .purr-container {
+                text-align: center;
+ 
+                .purr-img {
+                    width: 40%;
+                }
+            }
+ 
+            .bowl-container {
+                .cat-bowl {
+                    width: 80%;
+                }
+            }
+ 
+            .home-btns {
+                flex-direction: column;
+                text-align: center;
+                justify-content: space-between;
+                height: 9rem;
+                width: 5.6rem;
+ 
+                .stake {
+                    width: 2rem;
+                }
+            }
+        }
+        .bottom-text {
+            width: 80%;
+            margin-top: 2%;
+ 
+            .btm-txt {
+                width: 100%;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px)
+              and (min-height: 812px) {
     .home-container {
         margin-top: -25%;
+        margin-bottom: -30%;
  
         .home-card {
             width: 80%;
@@ -450,6 +507,7 @@ body {
  
     .home-container {
         margin-top: -9%;
+        margin-bottom: -4%;
  
  
         .bottom-text {
