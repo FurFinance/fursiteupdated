@@ -1,20 +1,227 @@
-.iconsParent {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    margin-bottom: 2%;
-    
-    
- a {
-     margin-bottom: -120px;
-     margin-right: 40px;
-     margin-left: 40px;
- }
+.app-footer {
 
- a:hover {
-     transform: scale(1.5);
-     transition: .5s;
- }
+    .footer {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+
+        .iconsParent {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 20%; 
+            
+            a {
+                font-size: 1rem;
+            }
+            
+            a:hover {
+                transform: scale(2);
+                transition: .5s;
+            }
+
+            .discord-container {
+                .discord-icon {
+                    font-size: 1.5rem;
+                }
+
+                .discord-icon:hover {
+                    transform: scale(1.5);
+                    transition: .5s;
+                }
+            }
+
+            .telegram-container {
+                .telegram-icon {
+                    font-size: 1.5rem;
+                }
+
+                .telegram-icon:hover {
+                    transform: scale(1.5);
+                    transition: .5s;
+                }
+            }
+
+            .twitter-container {
+                .twitter-icon {
+                    font-size: 1.5rem;
+                }
+
+                .twitter-icon:hover {
+                    transform: scale(1.5);
+                    transition: .5s;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+
+                .discord-container {
+                    .discord-icon {
+                        font-size: 2.5rem;
+                    }
     
+                    .discord-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .telegram-container {
+                    .telegram-icon {
+                        font-size: 2.5rem;
+                    }
+    
+                    .telegram-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .twitter-container {
+                    .twitter-icon {
+                        font-size: 2.5rem;
+                    }
+    
+                    .twitter-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+
+                .discord-container {
+                    .discord-icon {
+                        font-size: 1.5rem;
+                    }
+    
+                    .discord-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .telegram-container {
+                    .telegram-icon {
+                        font-size: 1.5rem;
+                    }
+    
+                    .telegram-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .twitter-container {
+                    .twitter-icon {
+                        font-size: 1.5rem;
+                    }
+    
+                    .twitter-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 411px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 50%;
+
+                .discord-container {
+                    .discord-icon {
+                        font-size: 1rem;
+                    }
+    
+                    .discord-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .telegram-container {
+                    .telegram-icon {
+                        font-size: 1rem;
+                    }
+    
+                    .telegram-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .twitter-container {
+                    .twitter-icon {
+                        font-size: 1rem;
+                    }
+    
+                    .twitter-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
 }
