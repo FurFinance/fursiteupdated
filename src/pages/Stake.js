@@ -574,7 +574,7 @@ class Stake extends Component {
                         className="input"
                         id="amountToStake"
                         placeholder="AMOUNT"
-                        value={amountToStake}
+                        value={amountToStake.toString()}
                         onChange={this.handleChange}
                       />
                     </div>
@@ -620,7 +620,7 @@ class Stake extends Component {
                         className="input"
                         id="amountToUnstake"
                         placeholder="WITHDRAW"
-                        value={amountToUnstake}
+                        value={amountToUnstake.toString()}
                         onChange={this.handleChange}
                       />
                     </div>
@@ -633,7 +633,7 @@ class Stake extends Component {
                       >
                         ALL
                       </button>
-                      <button  
+                      <button 
                         // TODO do better type check here, right now userDividends is a string
                         disabled={userDividends == 0}
                         onClick={this.handleCollect}
