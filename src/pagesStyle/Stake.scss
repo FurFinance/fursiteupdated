@@ -572,7 +572,7 @@ body {
 }
 
 @media screen 
-    and (max-width: 2560px) {
+    and (min-width: 2560px) {
     // and (min-height: 1600px) {
   .stake-container {
     // margin-top: -10%;
