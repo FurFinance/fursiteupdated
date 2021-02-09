@@ -572,6 +572,194 @@ body {
 }
 
 @media screen 
+    and (max-width: 2560px)
+    and (min-height: 1600px) {
+  .stake-container {
+    // margin-top: -10%;
+    margin-bottom: -3%;
+ 
+    .main-card {
+      width: 30%;
+      margin-bottom: 5%;
+ 
+      .stake-header {
+ 
+        .stake-h1 {
+          font-size: 3.2rem;
+        }
+ 
+        .stake-h2 {
+          font-size: 2.5rem;
+        }
+      }
+ 
+      .all-cards-div {
+ 
+        // CARD ONE
+ 
+        .all-staked-card {
+          width: 110%;
+          height: 23rem;
+          margin-bottom: 3%;
+ 
+          .all-staked-text {
+ 
+            .all-staked-h3 {
+              font-size: 1.9rem;
+              line-height: 18px;
+            }
+ 
+            .stake-number {
+              font-size: 7rem;
+            }
+          }
+ 
+          .all-staked-img {
+            width: 40%;
+            margin-left: -2%;
+ 
+            .food-img-1 {
+              width: 14rem;
+            }
+          }
+        }
+ 
+        // CARD TWO
+ 
+        .your-staked-card {
+          width: 110%;
+          height: 23rem;
+          margin-bottom: 3%;
+ 
+          .your-staked-text {
+            margin-right: 10%;
+ 
+            .your-staked-h3 {
+              font-size: 1.9rem;
+              line-height: 40px;
+            }
+ 
+            .stake-number {
+              font-size: 7rem;
+            }
+          }
+ 
+          .your-staked-img {
+            width: 40%;
+
+            .food-img-2 {
+              width: 16rem;
+              height: 21rem;
+              margin-top: 4%;
+            }
+          }
+        }
+ 
+        // CARD THREE
+ 
+        .stake-card {
+          width: 110%;
+          height: 23rem;
+          margin-bottom: 3%;
+ 
+          .stake-card-text {
+            margin-right: 5%;
+ 
+            .stake-h3 {
+              line-height: 15px;
+              font-size: 1.6rem;
+            }
+ 
+            .stake-number {
+              font-size: 7rem;
+            }
+ 
+            .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 1.3rem;
+              }
+
+              .stake-buttons {
+                width: 100%;
+ 
+                .farmBtn1 {
+                  width: 5rem;
+                  margin-left: -3%;
+                }
+ 
+                .farmBtn2 {
+                  width: 5rem;
+                }
+              }
+            }
+          }
+ 
+          .staked-img {
+            .food-img-3 {
+              width: 16.5rem;
+              margin-right: 4%;
+            }
+          }
+        }
+ 
+        // CARD FOUR
+ 
+        .fur-profit-card {
+          width: 110%;
+          height: 23rem;
+          margin-bottom: 3%;
+ 
+          .fur-profit-text {
+            width: 70%;
+            margin-right: 6%;
+ 
+            .profit-h3 {
+              font-size: 1.4rem;
+            }
+ 
+            .stake-number {
+              font-size: 7rem;
+            }
+ 
+            .profit-functionality {
+ 
+              .field ::placeholder {
+                font-size: 1.3rem;
+              }
+ 
+              .profit-buttons {
+                width: 100%;
+ 
+                .farmBtn3 {
+                  width: 4rem;
+                }
+ 
+                .farmBtn4 {
+                  width: 5.5rem;
+                }
+ 
+                .farmBtn5 {
+                  width: 6rem;
+                }
+              }
+            }
+          }
+          .staked-img {
+            margin-right: 10%;
+ 
+            .food-img-4 {
+              width: 12.7rem;
+              // height: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen 
     and (max-width: 1920px)
     and (min-height: 1080px) {
   .stake-container {
@@ -758,6 +946,7 @@ body {
 @media screen and (max-width: 1024px) {
   .stake-container {
     margin-top: -10%;
+    margin-bottom: -15%;
  
     .main-card {
       width: 45%;
@@ -780,19 +969,19 @@ body {
         // CARD ONE
  
         .all-staked-card {
-          width: 85%;
-          height: 10rem;
-          margin-bottom: 7%;
+          width: 95%;
+          height: 13rem;
+          margin-bottom: 3%;
  
           .all-staked-text {
  
             .all-staked-h3 {
-              font-size: 0.8rem;
+              font-size: 1rem;
               line-height: 18px;
             }
  
             .stake-number {
-              font-size: 4rem;
+              font-size: 5rem;
             }
           }
  
@@ -801,7 +990,7 @@ body {
             margin-left: -2%;
  
             .food-img-1 {
-              width: 6rem;
+              width: 8rem;
             }
           }
         }
@@ -809,26 +998,26 @@ body {
         // CARD TWO
  
         .your-staked-card {
-          width: 85%;
-          height: 10rem;
-          margin-bottom: 7%;
+          width: 95%;
+          height: 13rem;
+          margin-bottom: 3%;
  
           .your-staked-text {
  
             .your-staked-h3 {
-              font-size: 0.8rem;
-              line-height: 18px;
+              font-size: 1rem;
+              line-height: 25px;
             }
  
             .stake-number {
-              font-size: 4rem;
+              font-size: 5rem;
             }
           }
  
           .your-staked-img {
  
             .food-img-2 {
-              width: 7rem;
+              width: 9rem;
             }
           }
         }
@@ -836,19 +1025,19 @@ body {
         // CARD THREE
  
         .stake-card {
-          width: 85%;
-          height: 12rem;
-          margin-bottom: 7%;
+          width: 95%;
+          height: 13rem;
+          margin-bottom: 3%;
  
           .stake-card-text {
  
             .stake-h3 {
               line-height: 15px;
-              font-size: 0.6rem;
+              font-size: 0.9rem;
             }
  
             .stake-number {
-              font-size: 3rem;
+              font-size: 4rem;
             }
  
             .stake-functionality {
@@ -856,11 +1045,11 @@ body {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: 2rem;
+                  width: 2.5rem;
                 }
  
                 .farmBtn2 {
-                  width: 3rem;
+                  width: 3.5rem;
                 }
               }
             }
@@ -868,9 +1057,7 @@ body {
  
           .staked-img {
             .food-img-3 {
-              margin-top: 10%;
-              width: 7rem;
-              height: 10rem;
+              width: 9rem;
             }
           }
         }
@@ -878,20 +1065,20 @@ body {
         // CARD FOUR
  
         .fur-profit-card {
-          width: 85%;
+          width: 95%;
           height: 13rem;
-          margin-bottom: 5%;
+          margin-bottom: 3%;
  
           .fur-profit-text {
             width: 70%;
-            margin-right: 6%;
+            margin-right: 3%;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.8rem;
             }
  
             .stake-number {
-              font-size: 3rem;
+              font-size: 4rem;
             }
  
             .profit-functionality {
@@ -918,12 +1105,10 @@ body {
             }
           }
           .staked-img {
-            margin-left: 3%;
+            margin-right: 0%;
  
             .food-img-4 {
-              margin-top: 10%;
-              width: 5rem;
-              height: 8rem;
+              width: 7rem;
             }
           }
         }
@@ -1114,7 +1299,7 @@ body {
  
     .main-card {
       width: 60%;
-      margin-bottom: 10%;
+      margin-bottom: 18%;
  
       .stake-header {
  
@@ -1205,6 +1390,11 @@ body {
             }
  
             .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 0.8rem;
+              }
+
               .stake-buttons {
                 width: 100%;
  
@@ -1236,15 +1426,15 @@ body {
           margin-bottom: 5%;
  
           .fur-profit-text {
-            width: 70%;
-            margin-right: 6%;
+            width: 100%;
+            margin-right: 0%;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.9rem;
             }
  
             .stake-number {
-              font-size: 3rem;
+              font-size: 4rem;
             }
  
             .profit-functionality {
@@ -1271,12 +1461,10 @@ body {
             }
           }
           .staked-img {
-            margin-left: 3%;
+            display: none;
  
             .food-img-4 {
-              margin-top: 10%;
-              width: 4rem;
-              height: 8rem;
+              display: none;
             }
           }
         }
@@ -1383,6 +1571,11 @@ body {
             }
  
             .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 0.9rem;
+              }
+
               .stake-buttons {
                 width: 100%;
  
@@ -1414,11 +1607,11 @@ body {
           margin-bottom: 5%;
  
           .fur-profit-text {
-            width: 70%;
-            margin-right: 6%;
+            width: 100%;
+            margin-left: 5%;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.9rem;
             }
  
             .stake-number {
@@ -1449,12 +1642,10 @@ body {
             }
           }
           .staked-img {
-            margin-left: 3%;
+            display: none;
  
             .food-img-4 {
-              margin-top: 10%;
-              width: 4rem;
-              height: 8rem;
+              display: none;
             }
           }
         }
@@ -1562,11 +1753,16 @@ body {
             }
  
             .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 0.9rem;
+              }
+
               .stake-buttons {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: 2rem;
+                  width: 2.5rem;
                 }
  
                 .farmBtn2 {
@@ -1593,11 +1789,14 @@ body {
           margin-bottom: 5%;
  
           .fur-profit-text {
-            width: 70%;
-            margin-right: 6%;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            margin-left: 4%;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.9rem;
             }
  
             .stake-number {
@@ -1632,12 +1831,10 @@ body {
             }
           }
           .staked-img {
-            margin-left: 3%;
+            display: none;
  
             .food-img-4 {
-              margin-top: 10%;
-              width: 4rem;
-              height: 8rem;
+              display: none;
             }
           }
         }
@@ -1742,6 +1939,11 @@ body {
             }
  
             .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 0.8rem;
+              }
+
               .stake-buttons {
                 width: 100%;
  
@@ -1774,12 +1976,12 @@ body {
  
           .fur-profit-text {
             width: 100%;
-            margin-right: -0.2%;
+            // margin-right: -0.2%;
             text-align: center;
             align-items: center;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.8rem;
             }
  
             .stake-number {
@@ -1789,7 +1991,7 @@ body {
             .profit-functionality {
  
               .field ::placeholder {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
               }
  
               .profit-buttons {
@@ -1928,11 +2130,11 @@ body {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: 2rem;
+                  width: 3rem;
                 }
  
                 .farmBtn2 {
-                  width: 3rem;
+                  width: 3.5rem;
                 }
               }
             }
@@ -1941,7 +2143,7 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 7rem;
+              width: 7.5rem;
               height: 10rem;
             }
           }
@@ -1961,11 +2163,11 @@ body {
             align-items: center;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.8rem;
             }
  
             .stake-number {
-              font-size: 3rem;
+              font-size: 3.5rem;
             }
  
             .profit-functionality {
@@ -1992,6 +2194,7 @@ body {
             }
           }
           .staked-img {
+            display: none;
  
             .food-img-4 {
               display: none;
@@ -2099,16 +2302,21 @@ body {
             }
  
             .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 0.7rem;
+              }
+
               .stake-buttons {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: rem;
+                  width: 3rem;
                   height: 1.5rem;
                 }
  
                 .farmBtn2 {
-                  width: 3rem;
+                  width: 3.5rem;
                   height: 1.5rem;
                 }
               }
@@ -2146,31 +2354,31 @@ body {
             .profit-functionality {
  
               .field ::placeholder {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
               }
  
               .profit-buttons {
                 width: 100%;
  
                 .farmBtn3 {
-                  width: 3.5rem;
+                  width: 3rem;
                   height: 1.5rem;
                 }
  
                 .farmBtn4 {
-                  width: 5.5rem;
+                  width: 5rem;
                   height: 1.5rem;
                 }
  
                 .farmBtn5 {
-                  width: 6rem;
+                  width: 5.5rem;
                   height: 1.5rem;
                 }
               }
             }
           }
           .staked-img {
-            margin-left: 3%;
+            display: none;
  
             .food-img-4 {
               display: none;
@@ -2186,8 +2394,8 @@ body {
   .stake-container {
  
     .main-card {
-      width: 80%;
-      margin-bottom: 10%;
+      width: 90%;
+      margin-bottom: 14%;
  
       .stake-header {
  
@@ -2311,15 +2519,15 @@ body {
           margin-bottom: 5%;
  
           .fur-profit-text {
-            width: 90%;
-            margin-right: 4.5%;
+            width: 100%;
+            margin-right: 0%;
  
             .profit-h3 {
-              font-size: 0.6rem;
+              font-size: 0.8rem;
             }
  
             .stake-number {
-              font-size: 2.5rem;
+              font-size: 3rem;
             }
  
             .profit-functionality {
@@ -2337,17 +2545,19 @@ body {
                 width: 100%;
  
                 .farmBtn3 {
-                  width: 3.5rem;
+                  width: 4rem;
                   height: 1.5rem;
+                  margin-right: 1%;
                 }
  
                 .farmBtn4 {
-                  width: 5.5rem;
+                  width: 6rem;
                   height: 1.5rem;
+                  margin-right: 1%;
                 }
  
                 .farmBtn5 {
-                  width: 6rem;
+                  width: 6.5rem;
                   height: 1.5rem;
                 }
               }
