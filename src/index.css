@@ -9,6 +9,9 @@ body > #root > div {
   background-color: #161b22;
 }
 
+button.buttonClassName:disabled {
+  opacity: 0.3;
+}
 
 
 
