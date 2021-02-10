@@ -386,6 +386,198 @@ body {
  
 // RESPONSIVE
 
+@media screen and (min-width: 5120px) {
+  .stake-container {
+    margin-top: -3%;
+    margin-bottom: -7%;
+ 
+    .main-card {
+      width: 20%;
+      margin-bottom: 5%;
+ 
+      .stake-header {
+ 
+        .stake-h1 {
+          font-size: 3.7rem;
+        }
+ 
+        .stake-h2 {
+          font-size: 2.9rem;
+        }
+      }
+ 
+      .all-cards-div {
+ 
+        // CARD ONE
+ 
+        .all-staked-card {
+          width: 110%;
+          height: 25rem;
+          margin-bottom: 3%;
+ 
+          .all-staked-text {
+ 
+            .all-staked-h3 {
+              font-size: 2.3rem;
+              line-height: 18px;
+            }
+ 
+            .stake-number {
+              font-size: 8rem;
+            }
+          }
+ 
+          .all-staked-img {
+            width: 40%;
+ 
+            .food-img-1 {
+              width: 17rem;
+            }
+          }
+        }
+ 
+        // CARD TWO
+ 
+        .your-staked-card {
+          width: 110%;
+          height: 25rem;
+          margin-bottom: 3%;
+ 
+          .your-staked-text {
+            margin-right: 10%;
+ 
+            .your-staked-h3 {
+              font-size: 2.3rem;
+              line-height: 45px;
+            }
+ 
+            .stake-number {
+              font-size: 8rem;
+            }
+          }
+ 
+          .your-staked-img {
+            width: 40%;
+
+            .food-img-2 {
+              width: 22rem;
+            }
+          }
+        }
+ 
+        // CARD THREE
+ 
+        .stake-card {
+          width: 110%;
+          height: 25rem;
+          margin-bottom: 3%;
+ 
+          .stake-card-text {
+ 
+            .stake-h3 {
+              line-height: 25px;
+              font-size: 1.8rem;
+            }
+ 
+            .stake-number {
+              font-size: 8rem;
+            }
+ 
+            .stake-functionality {
+
+              .field ::placeholder {
+                font-size: 1.5rem;
+              }
+
+              .stake-buttons {
+                width: 100%;
+ 
+                .farmBtn1 {
+                  width: 6rem;
+                  height: 3rem;
+                  font-size: 1.5rem;
+                }
+ 
+                .farmBtn2 {
+                  width: 6rem;
+                  height: 3rem;
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+ 
+          .staked-img {
+            .food-img-3 {
+              width: 20rem;
+              margin-right: 4%;
+            }
+          }
+        }
+ 
+        // CARD FOUR
+ 
+        .fur-profit-card {
+          width: 110%;
+          height: 25rem;
+          margin-bottom: 3%;
+ 
+          .fur-profit-text {
+            width: 70%;
+            margin-right: 6%;
+ 
+            .profit-h3 {
+              font-size: 1.6rem;
+            }
+ 
+            .stake-number {
+              font-size: 8rem;
+            }
+ 
+            .profit-functionality {
+ 
+              .field ::placeholder {
+                font-size: 1.5rem;
+              }
+ 
+              .profit-buttons {
+                width: 100%;
+ 
+                .farmBtn3 {
+                  width: 4rem;
+                  height: 3rem;
+                  font-size: 1.5rem;
+                }
+ 
+                .farmBtn4 {
+                  width: 7.5rem;
+                  height: 3rem;
+                  font-size: 1.5rem;
+                }
+ 
+                .farmBtn5 {
+                  width: 9.5rem;
+                  height: 3rem;
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+          .staked-img {
+            margin-right: 10%;
+ 
+            .food-img-4 {
+              width: 15rem;
+              // height: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 @media screen 
     and (max-width: 2920px)
     and (min-height: 1600px) {
@@ -572,10 +764,9 @@ body {
 }
 
 @media screen 
-    and (min-width: 2560px) {
-    // and (min-height: 1600px) {
+    and (max-width: 2560px) 
+    and (min-height: 1600px) {
   .stake-container {
-    // margin-top: -10%;
     margin-bottom: -3%;
  
     .main-card {
@@ -822,8 +1013,8 @@ body {
           .your-staked-text {
  
             .your-staked-h3 {
-              font-size: 1.2rem;
-              line-height: 18px;
+              font-size: 1.3rem;
+              line-height: 30px;
             }
  
             .stake-number {
@@ -836,6 +1027,7 @@ body {
 
             .food-img-2 {
               width: 11rem;
+              height: 13.5rem;
             }
           }
         }
@@ -880,7 +1072,7 @@ body {
  
           .staked-img {
             .food-img-3 {
-              width: 11.5rem;
+              width: 12.5rem;
               margin-right: 6%;
             }
           }
@@ -932,7 +1124,7 @@ body {
             margin-right: 10%;
  
             .food-img-4 {
-              width: 9rem;
+              width: 9.5rem;
               // height: 8rem;
             }
           }
@@ -1018,6 +1210,7 @@ body {
  
             .food-img-2 {
               width: 9rem;
+              height: 11.5rem;
             }
           }
         }
@@ -1056,6 +1249,8 @@ body {
           }
  
           .staked-img {
+            margin-left: 0.8%;
+
             .food-img-3 {
               width: 9rem;
             }
@@ -1108,7 +1303,7 @@ body {
             margin-right: 0%;
  
             .food-img-4 {
-              width: 7rem;
+              width: 7.3rem;
             }
           }
         }
@@ -1120,6 +1315,7 @@ body {
 @media screen and (max-width: 768px) {
   .stake-container {
     margin-top: 2%;
+    margin-bottom: -5%;
  
     .main-card {
       width: 50%;
@@ -1191,6 +1387,7 @@ body {
  
             .food-img-2 {
               width: 7rem;
+              height: 9rem;
             }
           }
         }
@@ -1231,7 +1428,7 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 7rem;
+              width: 7.5rem;
               height: 10rem;
             }
           }
@@ -1266,7 +1463,8 @@ body {
                 width: 100%;
  
                 .farmBtn3 {
-                  width: 3.5rem;
+                  width: 3rem;
+                  margin-left: 2%;
                 }
  
                 .farmBtn4 {
@@ -1283,9 +1481,10 @@ body {
             margin-left: 3%;
  
             .food-img-4 {
-              margin-top: 10%;
-              width: 5rem;
-              height: 8rem;
+              margin-top: 17%;
+              margin-left: 10%;
+              width: 6rem;
+              height: 10rem;
             }
           }
         }
@@ -1299,7 +1498,7 @@ body {
  
     .main-card {
       width: 60%;
-      margin-bottom: 18%;
+      margin-bottom: 10%;
  
       .stake-header {
  
@@ -1367,6 +1566,7 @@ body {
  
             .food-img-2 {
               width: 7rem;
+              margin-left: 5%;
             }
           }
         }
@@ -1580,11 +1780,12 @@ body {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: 2rem;
+                  width: 3rem;
                 }
  
                 .farmBtn2 {
-                  width: 3rem;
+                  width: 3.5rem;
+                  margin-right: 10%;
                 }
               }
             }
@@ -1593,7 +1794,7 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 7rem;
+              width: 8rem;
               height: 10rem;
             }
           }
@@ -1608,7 +1809,6 @@ body {
  
           .fur-profit-text {
             width: 100%;
-            margin-left: 5%;
  
             .profit-h3 {
               font-size: 0.9rem;
@@ -1744,12 +1944,12 @@ body {
           .stake-card-text {
  
             .stake-h3 {
-              line-height: 15px;
+              line-height: 10px;
               font-size: 0.6rem;
             }
  
             .stake-number {
-              font-size: 3rem;
+              font-size: 3.5rem;
             }
  
             .stake-functionality {
@@ -1775,8 +1975,8 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 7rem;
-              height: 10rem;
+              width: 7.5rem;
+              height: 9.5rem;
             }
           }
         }
@@ -1793,7 +1993,6 @@ body {
             display: flex;
             text-align: center;
             align-items: center;
-            margin-left: 4%;
  
             .profit-h3 {
               font-size: 0.9rem;
@@ -1948,7 +2147,7 @@ body {
                 width: 100%;
  
                 .farmBtn1 {
-                  width: 2rem;
+                  width: 2.5rem;
                 }
  
                 .farmBtn2 {
@@ -1961,8 +2160,8 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 7rem;
-              height: 10rem;
+              width: 7.5rem;
+              height: 9rem;
             }
           }
         }
@@ -2098,6 +2297,7 @@ body {
  
             .food-img-2 {
               width: 7rem;
+              margin-left: -1%;
             }
           }
         }
@@ -2279,6 +2479,8 @@ body {
  
             .food-img-2 {
               width: 6rem;
+              height: 8rem;
+              margin-left: 15%;
             }
           }
         }
@@ -2327,7 +2529,8 @@ body {
             .food-img-3 {
               margin-top: 10%;
               width: 6.5rem;
-              height: 9rem;
+              height: 8.5rem;
+              margin-left: 15%;
             }
           }
         }
@@ -2340,8 +2543,7 @@ body {
           margin-bottom: 5%;
  
           .fur-profit-text {
-            width: 90%;
-            margin-right: 4.5%;
+            width: 100%;
  
             .profit-h3 {
               font-size: 0.6rem;
@@ -2435,7 +2637,7 @@ body {
             margin-left: -2%;
  
             .food-img-1 {
-              width: 5rem;
+              width: 5.5rem;
             }
           }
         }
@@ -2462,7 +2664,7 @@ body {
           .your-staked-img {
  
             .food-img-2 {
-              width: 6rem;
+              width: 6.5rem;
             }
           }
         }
@@ -2505,8 +2707,9 @@ body {
           .staked-img {
             .food-img-3 {
               margin-top: 10%;
-              width: 6.5rem;
+              width: 6.8rem;
               height: 9rem;
+              margin-left: 10%;
             }
           }
         }
@@ -2545,19 +2748,19 @@ body {
                 width: 100%;
  
                 .farmBtn3 {
-                  width: 4rem;
+                  width: 4/5rem;
                   height: 1.5rem;
                   margin-right: 1%;
                 }
  
                 .farmBtn4 {
-                  width: 6rem;
+                  width: 6.5rem;
                   height: 1.5rem;
                   margin-right: 1%;
                 }
  
                 .farmBtn5 {
-                  width: 6.5rem;
+                  width: 7.5rem;
                   height: 1.5rem;
                 }
               }
