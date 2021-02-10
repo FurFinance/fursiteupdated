@@ -57,11 +57,150 @@
     }
 }
 
+@media screen and (min-width: 5120px) {
+    .app-footer {
+        .footer {
+            .iconsParent {
+                width: 5%;
+
+                .discord-container {
+                    .discord-icon {
+                        font-size: 3rem;
+                    }
+    
+                    .discord-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .telegram-container {
+                    .telegram-icon {
+                        font-size: 3rem;
+                    }
+    
+                    .telegram-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+
+
+                .twitter-container {
+                    .twitter-icon {
+                        font-size: 3rem;
+                    }
+    
+                    .twitter-icon:hover {
+                        transform: scale(1.5);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen 
+    and (max-width: 2920px)
+    and (min-height: 1600px) {
+        .app-footer {
+            .footer {
+                .iconsParent {
+                    width: 10%;
+    
+                    .discord-container {
+                        .discord-icon {
+                            font-size: 3rem;
+                        }
+        
+                        .discord-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+    
+    
+                    .telegram-container {
+                        .telegram-icon {
+                            font-size: 3rem;
+                        }
+        
+                        .telegram-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+    
+    
+                    .twitter-container {
+                        .twitter-icon {
+                            font-size: 3rem;
+                        }
+        
+                        .twitter-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+@media screen 
+    and (max-width: 1920px)
+    and (min-height: 1080px) {
+        .app-footer {
+            .footer {
+                .iconsParent {
+                    width: 15%;
+    
+                    .discord-container {
+                        .discord-icon {
+                            font-size: 2.5rem;
+                        }
+        
+                        .discord-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+    
+    
+                    .telegram-container {
+                        .telegram-icon {
+                            font-size: 2.5rem;
+                        }
+        
+                        .telegram-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+    
+    
+                    .twitter-container {
+                        .twitter-icon {
+                            font-size: 2.5rem;
+                        }
+        
+                        .twitter-icon:hover {
+                            transform: scale(1.5);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+}
+
 @media screen and (max-width: 1024px) {
     .app-footer {
         .footer {
             .iconsParent {
-                width: 50%;
+                width: 30%;
 
                 .discord-container {
                     .discord-icon {
