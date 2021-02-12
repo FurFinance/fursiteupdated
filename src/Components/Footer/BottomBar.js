@@ -12,7 +12,7 @@ const BottomBar = ({darkMode}) => {
         <div className="footer">
             <div className="iconsParent">
                   <div className="discord-container">
-                        <a href="https://discord.gg/tEhXTsqS">
+                        <a href="https://discord.gg/EzBgUqBd8p">
                               <FaDiscord className="discord-icon" style={{ color: !darkMode ? '#222f3e' : 'white' }} /> 
                         </a>
                   </div>
