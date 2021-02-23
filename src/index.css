@@ -1,26 +1,70 @@
+.gradient {
+    background: linear-gradient(181deg, #84bbad, #77f5d5);
+    background-size: 400% 400%;
 
+    -webkit-animation: Gradient 3s ease infinite;
+    -moz-animation: Gradient 3s ease infinite;
+    animation: Gradient 3s ease infinite;
+}
+
+@font-face {
+    font-family: "silkscreen";
+    src: url("/fonts/slkscre-webfont.woff2") format("woff2"),
+        url("/fonts/slkscre-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.silkscreen-font {
+    font-family: "silkscreen", monospace;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 61% 0%;
+    }
+    50% {
+        background-position: 40% 100%;
+    }
+    100% {
+        background-position: 61% 0%;
+    }
+}
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 61% 0%;
+    }
+    50% {
+        background-position: 40% 100%;
+    }
+    100% {
+        background-position: 61% 0%;
+    }
+}
+@keyframes Gradient {
+    0% {
+        background-position: 61% 0%;
+    }
+    50% {
+        background-position: 40% 100%;
+    }
+    100% {
+        background-position: 61% 0%;
+    }
+}
 
 body > #root > div {
-  height: 100vh;
+    height: 100vh;
 }
 
 .dark-mode {
-  color: rgb(255, 255, 255);
-  background-color: #161b22;
+    color: rgb(255, 255, 255);
+    background-color: #161b22;
 }
 
 button.buttonClassName:disabled {
-  opacity: 0.3;
+    opacity: 0.3;
 }
-
-
-
-
-
-
-
-
-
 
 /* .nt {
   min-height: 100vh;
@@ -131,7 +175,7 @@ button.buttonClassName:disabled {
 .ASCII {
 
   /* border: 2px solid red; */
-  /* margin: .5rem;
+/* margin: .5rem;
 
 }
 
@@ -243,4 +287,3 @@ button.buttonClassName:disabled {
 
 
   }  */
-
