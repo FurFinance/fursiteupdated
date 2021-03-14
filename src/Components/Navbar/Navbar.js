@@ -100,6 +100,17 @@ export const Navbar = (props) => {
                                 GROUP-FI
                             </Link>
                         </li>
+                        <li>
+                            <a
+                                style={{ color: "rgb(15, 224, 15)" }}
+                                className="stakeBTN"
+                                href="https://mooncats-viewer.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                MOONCATS VIEWER
+                            </a>
+                        </li>
 
                         {/* <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
             <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
