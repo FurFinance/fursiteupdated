@@ -100,7 +100,7 @@ export const Navbar = (props) => {
                                 GROUP-FI
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <a
                                 style={{ color: "rgb(15, 224, 15)" }}
                                 className="stakeBTN"
@@ -110,7 +110,7 @@ export const Navbar = (props) => {
                             >
                                 MOONCATS VIEWER
                             </a>
-                        </li>
+                        </li> */}
 
                         {/* <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
             <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
